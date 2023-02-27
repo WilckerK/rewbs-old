@@ -5,7 +5,9 @@
 
 Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas devido que cada bew é único e não se pode existir outra cópia do mesmo no jogo), o site deve girar em torno deles e do sistema de batalha entre eles. A aplicação deve dar liberdade do usuário gerenciar seus pets e "items" para o combate, além de que sua api seja acessível para que o discord bot tenha acesso.
 
-*Qualquer palavra abaixo que gere dúvida pode estar explicada no glossário ou exemplos🙂
+*Qualquer palavra abaixo que gere dúvida pode estar explicada no glossário ou exemplos.🙂
+>*Informações dentro de citação são anotações.✍
+
 ## Site (resumo):
 - Landing Page -> Página inicial com informações e imagens para convencer a pessoa a jogar.
 - Ranks -> Página listando os com maior level e os mais ricos.
@@ -21,8 +23,8 @@ Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas d
 - Pacote -> Dar duas cartas aleatórias para a pessoa.
 - Batalha -> Simular a batalha e voltar um gif da simulação.
 - Mercado -> Confirmar compras de rewbs.
-- Trocas -> Trocas de bews entre jogadores.
 - Banco de Dados -> Passar as informações do db.
+> Trocas -> Trocas de bews entre jogadores.
 
 ## Development
 
@@ -53,12 +55,14 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 		{
 			"name":"Rebew", 
 			"bewId":"INS000H12C1REEPS1S2I115151545", 
-			"feli": 100 
+			"feli": 100,
+			"?item": "Pena"
 		},
 		{
 			"name":"Myra", 
 			"bewId":"CUR001F03G2ETFER3000002011502", 
-			"feli": 75
+			"feli": 75,
+			"?item": null
 		}
 	],
 	"cartas":["Coroação", "Agrotóxico", "Coroação", "Domar uma Fera", "Berçário"]
@@ -68,6 +72,8 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 - **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Domar uma Fera", caso seu bew do brasão Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
 
 - **Mapa**: São cartas que tem seu efeito ativo no começo de cada turno, por exemplo: "Berçário", no começo de cada turno o bew de maior rank em campo tem seus status cortados pela metade até o final do turno.
+
+> **Item**: São cartas de efeito apenas ao bew que o segura.  
 
 ### Turno:
 ```mermaid
@@ -103,7 +109,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 	- [Pokemon](https://pokemon.com)
 	- [Tamagotchi](https://pt.wikipedia.org/wiki/Tamagotchi)
 
-- Tecnologias
+- **Tecnologias**:
 	- **Next.js**: [Getting Started | Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)
 	- **Next-Auth**: [NextAuth.js (next-auth.js.org)](https://next-auth.js.org/)
 	- **Django**: [Django documentation | Django (djangoproject.com)](https://docs.djangoproject.com/en/4.1/)
