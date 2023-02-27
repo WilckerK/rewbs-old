@@ -34,7 +34,7 @@ Desenvolver o site, certificando-se de que a pessoa esteja autenticada ("logada"
 ### Back-end:
 Desenvolver a API, certificando-se de que a aplicação que está acessando é verificada, e prezando pela segurança do banco de dados. Responsável pela lógica do jogo.
 
-# Glossário:
+# Glossário
 - **Rewbs**: Moedinha do jogo, vai ser possível ganhar rewbs por vencer batalhas ou por "daily". Comprar na loja também deve ser uma opção.
 - **Bews**: Pets, eles são objetos dentro do objeto do usuário. Cada bew tem valores fixos e alteráveis como: rank, ataque, velocidade, acerto, resistência, felicidade, entre outros. Cada bew tem seu id próprio. Caso a felicidade do bew chegue a 0 ele "foge" e deixa o jogador.
 - **Invocar**: Ao pagar Rewbs será possível invocar um bew novo, tendo uma baixa chance de falha (a chance natural de 1/20 ou caso a pessoa por acaso do destino gere um bew já existente, assim retornando falha), o preço da invocação aumenta pela quantidade de bews que ela tem.
