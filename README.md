@@ -1,15 +1,16 @@
-# Rewbs Site! 
+# Rewbs! 
 *[alpha 0.0.1]*
 
 **O projeto gira em torno de um jogo de pets.**
 
 Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas devido que cada bew é único e não se pode existir outra cópia do mesmo no jogo), o site deve girar em torno deles e do sistema de batalha entre eles. A aplicação deve dar liberdade do usuário gerenciar seus pets e "items" para o combate, além de que sua api seja acessível para que o discord bot tenha acesso.
 
-*Qualquer palavra abaixo que gere dúvida pode estar explicada no glossário🙂
+*Qualquer palavra abaixo que gere dúvida pode estar explicada no glossário ou exemplos🙂
 ## Site (resumo):
-- Landing Page -> Página inicial com informações e imagens para convencer a pessoa a jogar
+- Landing Page -> Página inicial com informações e imagens para convencer a pessoa a jogar.
+- Ranks -> Página listando os com maior level e os mais ricos.
 - Dashboard ->
-	 - Home -> Informações gerais, como quantia de rewbs, rank, entre outros.
+	 - Home -> Informações gerais, como quantia de rewbs, level, entre outros.
 	 - Bews -> Informações dos Bews, como posição de batalha, alegria, entre outros.
 	 - Joguinhos -> Joguinhos bobos para aumentar a felicidade dos bews.
 	 - Loja -> Área para comprar pacotes, invocações e comprar rewbs com dinheiro real.
@@ -25,21 +26,21 @@ Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas d
 
 ## Development
 
-### Front-end
+### Front-end:
 Desenvolver o site, certificando-se de que a pessoa esteja autenticada ("logada") para que possa manter a navegação pelo dashboard. Tema com cores análogas ao vermelho escuro, background preto e outros detalhes em branco. E foco sempre no layout intuitivo.  
 
-### Back-end
+### Back-end:
 Desenvolver a API, certificando-se de que a aplicação que está acessando é verificada, e prezando pela segurança do banco de dados. Responsável pela lógica do jogo.
 
-# Glossário
-- **Rewbs**: Moedinha do jogo, vai ser possível ganhar rewbs por vencer batalhas ou por "daily".
+# Glossário:
+- **Rewbs**: Moedinha do jogo, vai ser possível ganhar rewbs por vencer batalhas ou por "daily". Comprar na loja também deve ser uma opção.
 - **Bews**: Pets, eles são objetos dentro do objeto do usuário. Cada bew tem valores fixos e alteráveis como: rank, ataque, velocidade, acerto, resistência, felicidade, entre outros. Cada bew tem seu id próprio. Caso a felicidade do bew chegue a 0 ele "foge" e deixa o jogador.
 - **Invocar**: Ao pagar Rewbs será possível invocar um bew novo, tendo uma baixa chance de falha (a chance natural de 1/20 ou caso a pessoa por acaso do destino gere um bew já existente, assim retornando falha), o preço da invocação aumenta pela quantidade de bews que ela tem.
 - **Cruzar**: Invoca um bew com características dos pais, que por sua vez acaba perdendo eles (os pais) no processo. 
 - **Cartas**: Dois tipos de cartas, sendo carta de resposta e cartas de mapa, suas ações são explicadas nos exemplos.
 - **Pacote**: Pacotes podem ser comprados com rewbs e darão ao jogador duas cartas aleatórias.
 
-# Exemplos:
+# Exemplos
 ### Objeto do User:
 ```json
 {
@@ -47,7 +48,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 	"id": "lfhgolsnvoh8u494hfkjf466sh",
 	"discordId": "34534536363456",
 	"exp": 87987,
-	"rewbs": 120,
+	"rewbs": 1340,
 	"bews":[
 		{
 			"name":"Rebew", 
@@ -86,7 +87,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 # Referências
 - **Web**:
 	- [YAGPDB](https://yagpdb.xyz/)
-	- [ Dyno](https://dyno.gg/)
+	- [Dyno](https://dyno.gg/)
 ``` xml
 <palette>
 <color name='Abstract-red' rgb='8C030E' r='140' g='2' b='14' />
@@ -102,18 +103,18 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 	- [Pokemon](https://pokemon.com)
 	- [Tamagotchi](https://pt.wikipedia.org/wiki/Tamagotchi)
 
-# Tecnologias
-- **Next.js**: [Getting Started | Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)
-- **Next-Auth**: [NextAuth.js (next-auth.js.org)](https://next-auth.js.org/)
-- **Django**: [Django documentation | Django (djangoproject.com)](https://docs.djangoproject.com/en/4.1/)
-- **PyMongo**: [PyMongo — MongoDB Drivers](https://www.mongodb.com/docs/drivers/pymongo/)
-- **Square**: [Square Cloud - Sua aplicação online](https://squarecloud.app/)
-# Link Úteis
+- Tecnologias
+	- **Next.js**: [Getting Started | Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)
+	- **Next-Auth**: [NextAuth.js (next-auth.js.org)](https://next-auth.js.org/)
+	- **Django**: [Django documentation | Django (djangoproject.com)](https://docs.djangoproject.com/en/4.1/)
+	- **PyMongo**: [PyMongo — MongoDB Drivers](https://www.mongodb.com/docs/drivers/pymongo/)
+	- **Square**: [Square Cloud - Sua aplicação online](https://squarecloud.app/)
 
+# Link Úteis
 - [Planilha dos Bews](https://docs.google.com/spreadsheets/d/1JtYD7HOH2AdcL9KxdH-sBE2PINgIFIMStCfiCNTYXjk/edit?usp=sharing)
 - [Reb-info](https://discord.gg/ZgTjANdwcS)
 - [Reb Repositório](https://github.com/WilckerK/reb)
 
-**Os link úteis podem estar desatualizados em relação a ideias e programações, mas podem ser usados como base ou para ter uma ideia.*
+**Os link úteis podem estar desatualizados em relação a ideias e programações, mas podem ser usados como base e/ou para ter uma ideia.*
 ##
 **Todo o markdown pode ser alterado por qualquer membro da equipe, não se acanhe ao acrescentar uma informação.*
