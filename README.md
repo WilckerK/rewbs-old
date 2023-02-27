@@ -1,5 +1,5 @@
 # Rewbs! 
-*[alpha 0.0.1]*
+*[alpha 0.0.3]*
 
 **O projeto gira em torno de um jogo de pets.**
 
@@ -65,7 +65,11 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 			"?item": null
 		}
 	],
-	"cartas":["Coroação", "Agrotóxico", "Coroação", "Domar uma Fera", "Berçário"]
+	"cartas":{
+			"resposta": ["Coroação", "Agrotóxico", "Coroação", "Domar uma Fera", "Berçário"],
+			"mapa": ["Berçário", "Mina"]
+			"item": ["Pena", "Livro"]
+		}
 }
 ```
 ### Cartas:
