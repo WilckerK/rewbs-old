@@ -100,11 +100,11 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 	- [Dyno](https://dyno.gg/)
 ``` xml
 <palette>
-<color name='Abstract-red' rgb='8C030E' r='140' g='2' b='14' />
-<color name='Abstract-red' rgb='260104' r='38' g='0' b='3' />
-<color name='Abstract-red' rgb='8C031C' r='140' g='2' b='28' />
-<color name='Abstract-red' rgb='40010D' r='63' g='1' b='12' />
-<color name='Abstract-red' rgb='0D0D0D' r='12' g='12' b='12' />
+<color name='Red-1' rgb='8C030E' r='140' g='2' b='14' />
+<color name='Red-2' rgb='260104' r='38' g='0' b='3' />
+<color name='Red-3' rgb='8C031C' r='140' g='2' b='28' />
+<color name='Red-4' rgb='40010D' r='63' g='1' b='12' />
+<color name='Black' rgb='0D0D0D' r='12' g='12' b='12' />
 </palette>
 ```
 
