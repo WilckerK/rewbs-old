@@ -126,5 +126,15 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 - [Reb Repositório](https://github.com/WilckerK/reb)
 
 **Os link úteis podem estar desatualizados em relação a ideias e programações, mas podem ser usados como base e/ou para ter uma ideia.*
+
+# Notas:
+- Forma de câmbio de rewbs entre jogadores.
+- Modo Casual, seria baseado no sistema do super auto pets de montar seu time durante uma jogatina com bews random.
+- Algum tipo de mensalidade que dê benefícios ao user, como pacotes e rewbs bonus no começo do mês.
+- Cosméticos.
+- Alimentar os bews para aumentar a felicidade.
+
+**As notas são ideias não acabadas sobre adições ao projeto.*
+
 ##
 **Todo o markdown pode ser alterado por qualquer membro da equipe, não se acanhe ao acrescentar uma informação.*
