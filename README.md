@@ -24,7 +24,7 @@ Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas d
 - Batalha -> Simular a batalha e voltar um gif da simulação.
 - Mercado -> Confirmar compras de rewbs.
 - Banco de Dados -> Passar as informações do db.
-> Trocas -> Trocas de bews entre jogadores.
+- Trocas -> Trocas de bews entre jogadores.
 
 ## Development
 
@@ -56,18 +56,18 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 			"name":"Rebew", 
 			"bewId":"INS000H12C1REEPS1S2I115151545", 
 			"feli": 100,
-			"?item": "Pena"
+			"item": "Pena"
 		},
 		{
 			"name":"Myra", 
 			"bewId":"CUR001F03G2ETFER3000002011502", 
 			"feli": 75,
-			"?item": null
+			"item": null
 		}
 	],
 	"cartas":{
 			"resposta": ["Coroação", "Agrotóxico", "Coroação", "Domar uma Fera", "Berçário"],
-			"mapa": ["Berçário", "Mina"]
+			"mapa": ["Berçário", "Mina"],
 			"item": ["Pena", "Livro"]
 		}
 }
@@ -77,7 +77,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 
 - **Mapa**: São cartas que tem seu efeito ativo no começo de cada turno, por exemplo: "Berçário", no começo de cada turno o bew de maior rank em campo tem seus status cortados pela metade até o final do turno.
 
-> **Item**: São cartas de efeito apenas ao bew que o segura.  
+- **Item**: São cartas de efeito apenas ao bew que o segura.  
 
 ### Turno:
 ```mermaid
