@@ -58,13 +58,15 @@ Para haver a reprodução, bews de sexos opostos devem cruzar, sendo o hermafrod
 
 ###cor
 Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensidade.
-- **A**: Preto -> Diminuir o brilho
-- **B**: Branco -> Aumentar o brilho
-- **C**: Vermelho -> RGB(alto, zero, zero)
-- **D**: Amarelo -> RGB(alto, alto, zero)
-- **E**: Verde -> RGB(zero, alto, zero)
-- **F**: Ciano -> RGB(zero, alto, alto)
-- **G**: Azul -> RGB(zero, zero, alto)
-- **H**: Lilás -> RGB(alto, zero, alto)
+| Letra | Cor | Descrição |
+| ------ | -------- | ------------- |
+| **A** | Preto | Diminuir o brilho
+| **B** | Branco | Aumentar o brilho
+| **C** | Vermelho | RGB(alto, zero, zero)
+| **D** | Amarelo | RGB(alto, alto, zero)
+| **E** | Verde | RGB(zero, alto, zero)
+| **F** | Ciano | RGB(zero, alto, alto)
+| **G** | Azul | RGB(zero, zero, alto)
+| **H** | Lilás | RGB(alto, zero, alto)
 
 # =-=-=-=-=-=-=-=-= CONSTRUÇÃO =-=-=-=-=-=-=-=-=
