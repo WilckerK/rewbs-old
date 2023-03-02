@@ -116,7 +116,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 - **Tecnologias**:
 	- **Next.js**: [Getting Started | Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)
 	- **Next-Auth**: [NextAuth.js (next-auth.js.org)](https://next-auth.js.org/)
-	- **Django**: [Django documentation | Django (djangoproject.com)](https://docs.djangoproject.com/en/4.1/)
+	- **Flask**:[Flask (flask.palletsprojects.com)](https://flask.palletsprojects.com/en/2.2.x/)
 	- **PyMongo**: [PyMongo — MongoDB Drivers](https://www.mongodb.com/docs/drivers/pymongo/)
 	- **Square**: [Square Cloud - Sua aplicação online](https://squarecloud.app/)
 
