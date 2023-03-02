@@ -23,7 +23,7 @@ Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas d
 - Pacote -> Dar duas cartas aleatórias para a pessoa.
 - Batalha -> Simular a batalha e voltar um gif da simulação.
 - Mercado -> Confirmar compras de rewbs.
-- Banco de Dados -> Passar as informações do db.
+- [Banco de Dados](https://github.com/WilckerK/rewbs/blob/main/BANCODEDADOS.md) -> Passar as informações do db.
 - Trocas -> Trocas de bews entre jogadores.
 
 ## Development
@@ -36,7 +36,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 
 # Glossário
 - **Rewbs**: Moedinha do jogo, vai ser possível ganhar rewbs por vencer batalhas ou por "daily". Comprar na loja também deve ser uma opção.
-- **Bews**: Pets, eles são objetos dentro do objeto do usuário. Cada bew tem valores fixos e alteráveis como: rank, ataque, velocidade, acerto, resistência, felicidade, entre outros. Cada bew tem seu id próprio. Caso a felicidade do bew chegue a 0 ele "foge" e deixa o jogador.
+- [**Bews**](https://github.com/WilckerK/rewbs/blob/main/BEWS.md): Pets, eles são objetos dentro do objeto do usuário. Cada bew tem valores fixos e alteráveis como: rank, ataque, velocidade, acerto, resistência, felicidade, entre outros. Cada bew tem seu id próprio. Caso a felicidade do bew chegue a 0 ele "foge" e deixa o jogador. 
 - **Invocar**: Ao pagar Rewbs será possível invocar um bew novo, tendo uma baixa chance de falha (a chance natural de 1/20 ou caso a pessoa por acaso do destino gere um bew já existente, assim retornando falha), o preço da invocação aumenta pela quantidade de bews que ela tem.
 - **Cruzar**: Invoca um bew com características dos pais, que por sua vez acaba perdendo eles (os pais) no processo. 
 - **Cartas**: Dois tipos de cartas, sendo carta de resposta e cartas de mapa, suas ações são explicadas nos exemplos.
@@ -56,13 +56,15 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 			"name":"Rebew", 
 			"bewId":"INS000H12C1REEPS1S2I115151545", 
 			"feli": 100,
-			"item": "Pena"
+			"item": "Pena",
+			"image": "adefeqjo8hfoeunfajldnfoeqhafunaefuiaegfyagdbjfhcaejbjlakelnflandhu=="
 		},
 		{
 			"name":"Myra", 
 			"bewId":"CUR001F03G2ETFER3000002011502", 
 			"feli": 75,
-			"item": null
+			"item": null,
+			"image": "gjkjefgeqfsgsfgsgsfhjo8hgjfoegnfoeqhjkkgfyagdbjfhcaegjkgjjbjlasfghsu=="
 		}
 	],
 	"cartas":{
