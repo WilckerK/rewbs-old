@@ -10,10 +10,7 @@
 - cor
 - brasão
 - habilidades
-- ataque
-- velocidade
-- acerto
-- resistencia
+- ataque, velocidade, acerto, resistencia
 
 ### Alteráveis:
 - nome
@@ -38,23 +35,28 @@ O id "INS001H12C1KISWS1S20015120645", significa que o bew tem:
 
 > **Todo o bew é básicamente seu id, as informações váriaveis ficam salvas no objeto do user, de resto o bew não terá o objeto salvo no banco de dados, apenas o seu id e as Aletráveis. Para saber as caracteristicas de um bew deve se converter por uma classe pelo id.*
 
+#
+
 ### Rank
 (Construção...)
 
 ### Raça
 As raças dos bews ficam salvas no banco de dados, ao gerar um bew se deve escolher uma raça aleatória entre elas. Eles são representados por 3 dígitos. (001, 002, ..., 045, ..., 245, etc...)
 
+#
+
 ### Sexo
 Os bews podem ter 4 váriações de sexo:
-"M" para macho.
-"F" para fêmea
-"H" para hermafrodita
-"X" para assexuado
+"M" para macho, "F" para fêmea, "H" para hermafrodita, "X" para assexuado.
 
 Para haver a reprodução, bews de sexos opostos devem cruzar, sendo o hermafrodita capaz de se passar por qualquer papel e o assexuado incapaz de realizar qualquer reprodução.
 
+#
+
 ### Personalidade
 (Construção...)
+
+#
 
 ### Cor
 Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensidade.
@@ -68,6 +70,8 @@ Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensi
 | **F** | Ciano | RGB(zero, alto, alto)
 | **G** | Azul | RGB(zero, zero, alto)
 | **H** | Lilás | RGB(alto, zero, alto)
+
+#
 
 ### Brasão
 Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí um brasão.
@@ -89,5 +93,41 @@ Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí
 | **CY** | Cyber | Cibernético, tecnologia, software, elétrico, moderno...
 | **FO** | Fortune | Fortuna, dinheiro, capital, ouro, riquezas, ganâmcia...
 | **AN** | Ancient | Ancião, velho, antigo, esquecido, desgastado, sábio...
+
+#
+
+> ### Habilidades
+> Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao brasão na hora da invocação, por exemplo, um bew do brasão "RO" (Roses), vir com as habilidades paixão e emocional.  
+> (Construção...)
+
+#
+
+### Status
+- **Ataque**: Quanto de força esse bew tem.
+- **Velocidade**: O bew mais rápido sempre ataca primeiro, caso um bew tenha o dobro da velocidade de outro ele bate duas vezes, o triplo três vezes, etc...
+- **Acerto**: A chance que um bew tem de acerto adicional.
+- **Resistência**: Quanto ele tem de vida antes de ser nocauteado.
+
+#
+
+### Nome
+O bew vem com um nome aleatório, mas o user deve conseguir alterar o nome dele.
+
+#
+
+### Imagem
+A imagem ficará guardada em BASE64 e deve ser convertida na hora de mostrar ao user.
+
+#
+
+### Felicidade
+O bew perde felicidade após perder batalhas e conforme o tempo passa, o user pode aumentar a felicidade de formas variadas.  
+(Construção...)
+
+#
+
+### Item
+Cada bew poderá segurar uma carta de item que o afetará durante as batalhas.
+
 
 # =-=-=-=-=-=-=-=-= CONSTRUÇÃO =-=-=-=-=-=-=-=-=
