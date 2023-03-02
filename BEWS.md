@@ -38,7 +38,10 @@ O id "INS001H12C1KISWS1S20015120645", significa que o bew tem:
 #
 
 ### Rank
+O rank é o quão forte um bew é, é um calculo feito após os dados do bew estiverem prontos.
 (Construção...)
+
+#
 
 ### Raça
 As raças dos bews ficam salvas no banco de dados, ao gerar um bew se deve escolher uma raça aleatória entre elas. Eles são representados por 3 dígitos. (001, 002, ..., 045, ..., 245, etc...)
@@ -54,6 +57,7 @@ Para haver a reprodução, bews de sexos opostos devem cruzar, sendo o hermafrod
 #
 
 ### Personalidade
+A personalidade influencia no rosto dele.
 (Construção...)
 
 #
@@ -96,9 +100,9 @@ Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí
 
 #
 
-> ### Habilidades
-> Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao brasão na hora da invocação, por exemplo, um bew do brasão "RO" (Roses), vir com as habilidades paixão e emocional.  
-> (Construção...)
+### Habilidades
+Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao brasão na hora da invocação, por exemplo, um bew do brasão "RO" (Roses), vir com as habilidades paixão e emocional.  
+(Construção...)
 
 #
 
