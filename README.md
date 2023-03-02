@@ -124,7 +124,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 
 # Link Úteis
 - [Planilha dos Bews](https://docs.google.com/spreadsheets/d/1JtYD7HOH2AdcL9KxdH-sBE2PINgIFIMStCfiCNTYXjk/edit?usp=sharing)
-- [Reb-info](https://discord.gg/ZgTjANdwcS)
+- [Reb-info](https://discord.com/channels/732276333429784707/1029498793382658178))
 - [Reb Repositório](https://github.com/WilckerK/reb)
 
 **Os link úteis podem estar desatualizados em relação a ideias e programações, mas podem ser usados como base e/ou para ter uma ideia.*
