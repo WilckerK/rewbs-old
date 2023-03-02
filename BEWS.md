@@ -1,5 +1,5 @@
 # BEWS
-**Esse arquivo é uma overview do (Planilha dos Bews)[https://docs.google.com/spreadsheets/d/1JtYD7HOH2AdcL9KxdH-sBE2PINgIFIMStCfiCNTYXjk/edit#gid=0] sobre os mesmos.*
+**Esse arquivo é uma overview do [Planilha dos Bews](https://docs.google.com/spreadsheets/d/1JtYD7HOH2AdcL9KxdH-sBE2PINgIFIMStCfiCNTYXjk/edit#gid=0) sobre os mesmos.*
 ## Os bews possuem propriedades: 
 ### Fixas:
 - id
@@ -24,7 +24,7 @@
 > **As váriaveis fixas só são alteradas conforme o efeito das cartas **durante a batalha**, após a batalha as fixas permanecem como estavam antes da batalha.*
 
 ## Geração dos Bews (Por Invocação)
-### id
+### Id
 O id do bew é definido pela junção das suas propriedades fixas, exemplo:
 O id "INS001H12C1KISWS1S20015120645", significa que o bew tem:
 - "INS" ou seja personalidade Insana
@@ -38,13 +38,13 @@ O id "INS001H12C1KISWS1S20015120645", significa que o bew tem:
 
 > **Todo o bew é básicamente seu id, as informações váriaveis ficam salvas no objeto do user, de resto o bew não terá o objeto salvo no banco de dados, apenas o seu id e as Aletráveis. Para saber as caracteristicas de um bew deve se converter por uma classe pelo id.*
 
-### rank
+### Rank
 (Construção...)
 
-### raça
+### Raça
 As raças dos bews ficam salvas no banco de dados, ao gerar um bew se deve escolher uma raça aleatória entre elas. Eles são representados por 3 dígitos. (001, 002, ..., 045, ..., 245, etc...)
 
-### sexo
+### Sexo
 Os bews podem ter 4 váriações de sexo:
 "M" para macho.
 "F" para fêmea
@@ -53,10 +53,10 @@ Os bews podem ter 4 váriações de sexo:
 
 Para haver a reprodução, bews de sexos opostos devem cruzar, sendo o hermafrodita capaz de se passar por qualquer papel e o assexuado incapaz de realizar qualquer reprodução.
 
-### personalidade
+### Personalidade
 (Construção...)
 
-###cor
+### Cor
 Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensidade.
 | Letra | Cor | Descrição |
 | ------ | -------- | ------------- |
@@ -68,5 +68,26 @@ Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensi
 | **F** | Ciano | RGB(zero, alto, alto)
 | **G** | Azul | RGB(zero, zero, alto)
 | **H** | Lilás | RGB(alto, zero, alto)
+
+### Brasão
+Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí um brasão.
+| Sigla | Nome | Descrição |
+| ------ | -------- | ------------- |
+| **KI** | King | Rei, monarquia, poder político, chefe da tribo, reino, líder...
+| **SW** | Sword | Espada, facas, armas brancas, guerra, violência, agressão, revolta...
+| **MU** | Music | Musica, arte, melodia, harmonia, ordem, esculturas...
+| **GE** | Gear | Engrenagem, máquinas, fábricas, armas de fogo, metal, robôs...
+| **SM** | Smile | Sorriso, alegria, humor, juventude, inocencia...
+| **GO** | Goodness | Bondade, benevolencia, anjelical, religioso, santo...
+| **BO** | Book | Livro, conhecimento, estudos, psiquico, mental...
+| **BE** | Beast | Besta, fera, animal, voraz, irracional...
+| **RO** | Roses | Rosas, plantas, paixão, natureza, amor, sedução...
+| **CA** | Catalyst | Catalizador, químico, mágico, intensificar, poções...
+| **MI** | Mistery | Mistério, bruxaria, oculto, maligno, criminoso...
+| **ST** | Star | Estrela, espaço, luz, planetas, divino, iluminado...
+| **CL** | Cloud | Nuvem, voar, ar, ventos, clima, alto, leve...
+| **CY** | Cyber | Cibernético, tecnologia, software, elétrico, moderno...
+| **FO** | Fortune | Fortuna, dinheiro, capital, ouro, riquezas, ganâmcia...
+| **AN** | Ancient | Ancião, velho, antigo, esquecido, desgastado, sábio...
 
 # =-=-=-=-=-=-=-=-= CONSTRUÇÃO =-=-=-=-=-=-=-=-=
