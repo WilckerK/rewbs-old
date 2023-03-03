@@ -119,6 +119,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 
 - **Tecnologias**:
 	- **Flask**: [Flask (flask.palletsprojects.com)](https://flask.palletsprojects.com/en/2.2.x/)
+	- **Flask-Login**: [Flask-Login Docs](https://flask-login.readthedocs.io/en/latest/)
 	- **PyMongo**: [PyMongo — MongoDB Drivers](https://www.mongodb.com/docs/drivers/pymongo/)
 	- **Square**: [Square Cloud - Sua aplicação online](https://squarecloud.app/)
 
