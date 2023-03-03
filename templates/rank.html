@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rebwellion | Rank</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+	<h1 style="text-align: center;">The ranking</h1>
+
+	<table>
+		<tr>
+			<th>Rank</th>
+		
+			<th>Level</th>
+			<th>Exp</th>
+
+			<th>Money</th>
+			<th>Total</th>
+		</tr>
+
+
+		<!-- -1 -> crescent order -->
+		<tr>
+			{% for user in users.find().sort('exp', -1) %}
+				<td>{{  user.name }}</td>
+				<td>{{  user.exp }}</td>
+			{% endfor %}
+		</tr>
+
+		<tr>
+			{% for user in users.find().sort('rewbs', -1) %}
+				<td>{{  user.name }}</td>
+				<td>{{  user.rewbs }}</td>
+			{% endfor %}
+		</tr>
+
+		
+		
+
+	</table>
+</div>
+{% endblock %}
