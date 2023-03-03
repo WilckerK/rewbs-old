@@ -47,6 +47,8 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 ```json
 {
 	"name": "Iberê",
+	"email": "manualdomundo@gmail.com",
+	"senha": "3fw4fwrffwefsddff3aw2"
 	"id": "lfhgolsnvoh8u494hfkjf466sh",
 	"discordId": "34534536363456",
 	"exp": 87987,
@@ -63,19 +65,19 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 			"name":"Myra", 
 			"bewId":"CUR001F03G2ETFER3000002011502", 
 			"feli": 75,
-			"item": null,
+			"item": "",
 			"image": "gjkjefgeqfsgsfgsgsfhjo8hgjfoegnfoeqhjkkgfyagdbjfhcaegjkgjjbjlasfghsu=="
 		}
 	],
 	"cartas":{
 			"resposta": ["Coroação", "Agrotóxico", "Coroação", "Domar uma Fera", "Berçário"],
 			"mapa": ["Berçário", "Mina"],
-			"item": ["Pena", "Livro"]
+			"item": ["Adaga", "Livro"]
 		}
 }
 ```
 ### Cartas:
-- **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Domar uma Fera", caso seu bew do brasão Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
+- **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Adestramento", caso seu bew do brasão Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
 
 - **Mapa**: São cartas que tem seu efeito ativo no começo de cada turno, por exemplo: "Berçário", no começo de cada turno o bew de maior rank em campo tem seus status cortados pela metade até o final do turno.
 
@@ -87,7 +89,7 @@ graph LR
 Z[Fase de Construção] --> A
 A[Inicio do Turno] --> B[Combate]
 B --> C[Fim do Turno]
-C --> D(Resultado)
+C --> D[Resultado]
 C --> A
 ```
 Fase de contrução monta o campo com o ele deve prosseguir durante a batalha
@@ -116,9 +118,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 	- [Tamagotchi](https://pt.wikipedia.org/wiki/Tamagotchi)
 
 - **Tecnologias**:
-	- **Next.js**: [Getting Started | Next.js (nextjs.org)](https://nextjs.org/docs/getting-started)
-	- **Next-Auth**: [NextAuth.js (next-auth.js.org)](https://next-auth.js.org/)
-	- **Flask**:[Flask (flask.palletsprojects.com)](https://flask.palletsprojects.com/en/2.2.x/)
+	- **Flask**: [Flask (flask.palletsprojects.com)](https://flask.palletsprojects.com/en/2.2.x/)
 	- **PyMongo**: [PyMongo — MongoDB Drivers](https://www.mongodb.com/docs/drivers/pymongo/)
 	- **Square**: [Square Cloud - Sua aplicação online](https://squarecloud.app/)
 
