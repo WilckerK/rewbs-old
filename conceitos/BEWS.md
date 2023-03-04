@@ -2,8 +2,10 @@
 **Esse arquivo é uma overview do [Planilha dos Bews](https://docs.google.com/spreadsheets/d/1JtYD7HOH2AdcL9KxdH-sBE2PINgIFIMStCfiCNTYXjk/edit#gid=0) sobre os mesmos.*
 ## Os bews possuem propriedades: 
 ### Fixas:
+As propriedades fixas são geradas durante o "nascimento" do bew e não podem ser alteradas, exceto **durante** as batalhas, após o término da batalha as propriedades fixas retornam ao que eram antes.
+
 - id
-- rank
+- tier
 - raça
 - sexo
 - personalidade
@@ -13,10 +15,12 @@
 - ataque, velocidade, acerto, resistencia
 
 ### Alteráveis:
+As propriedades Alteráveis podem ser alteradas pelo user, ele pode ter a opção de escolher qual item seu bew irá segurar, ou até mesmo o nome do bew.
+
 - nome
 - imagem
 - felicidade
-- equipamento
+- item
 
 > **As váriaveis fixas só são alteradas conforme o efeito das cartas **durante a batalha**, após a batalha as fixas permanecem como estavam antes da batalha.*
 
@@ -27,7 +31,7 @@ O id "INS001H12C1KISWS1S20015120645", significa que o bew tem:
 - "INS" ou seja personalidade Insana
 - "001" a raça dele é a 001
 - "H" sexo hermafrodita
-- "12" ele tem rank 12
+- "12" ele tem tier 12
 - "C1" dentre as variações de cor ele é a C1 (C é vermelho e 1 de intensidade)
 - "K1SW" ele tem os brasões "KI" (King) e "SW" (Sword)
 - "S1S200" tem as habilidades S1 e S2. 00 é o placeholder
@@ -37,9 +41,10 @@ O id "INS001H12C1KISWS1S20015120645", significa que o bew tem:
 
 #
 
-### Rank
-O rank é o quão forte um bew é, é um calculo feito após os dados do bew estiverem prontos.
-(Construção...)
+### Tier
+"O tier é o quão forte um bew é", é um calculo feito após os dados do bew estiverem prontos, sendo:
+`((ataque + velocidade + acerto) / 7) + (resitencia / 13) + quantidadeDeHabilidades`
+O resultado dessa conta sempre resultará entre 0 a 12. O tier também e responsável pela tamanho do bew, sendo 0 o menor e 13 o maior.
 
 #
 
@@ -101,16 +106,15 @@ Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí
 #
 
 ### Habilidades
-Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao brasão na hora da invocação, por exemplo, um bew do brasão "RO" (Roses), vir com as habilidades paixão e emocional.  
-(Construção...)
+Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao brasão na hora da invocação, por exemplo, um bew do brasão "RO" (Roses), vir com as habilidades paixão e emocional. 
 
 #
 
 ### Status
-- **Ataque**: Quanto de força esse bew tem.
-- **Velocidade**: O bew mais rápido sempre ataca primeiro, caso um bew tenha o dobro da velocidade de outro ele bate duas vezes, o triplo três vezes, etc...
-- **Acerto**: A chance que um bew tem de acerto adicional.
-- **Resistência**: Quanto ele tem de vida antes de ser nocauteado.
+- **Ataque** (0 a 15): Quanto de força esse bew tem.
+- **Velocidade** (0 a 15): O bew mais rápido sempre ataca primeiro, caso um bew tenha o dobro da velocidade de outro ele bate duas vezes, o triplo três vezes, etc...
+- **Acerto** (0 a 15): A chance que um bew tem de acerto adicional.
+- **Resistência** (0 a 45): Quanto ele tem de vida antes de ser nocauteado.
 
 #
 
