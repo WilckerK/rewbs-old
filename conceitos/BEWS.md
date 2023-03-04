@@ -62,8 +62,15 @@ Para haver a reprodução, bews de sexos opostos devem cruzar, sendo o hermafrod
 #
 
 ### Personalidade
-A personalidade influencia no rosto dele.
-(Construção...)
+A personalidade influencia no rosto dele. E na interação que eles irão ter sobre passar.
+- **INSANO**: 25% de chance de passar a cada turno.
+- **ALEGRE**: A resistencia dele chegar em 3/4 ele passa.
+- **CORAJOSO**: Fica até o final.
+- **MEDROSO**: Se o oponente tiver mais porcentagem de resistencia que ele, ele passa.
+- **ATREVIDO**: Se derrotar um oponente, ele passa passa.
+- **CUIROSO**: Se a resistÊcia chega a 1/4 ele passa
+- **RANCOROSO**: Se o oponente passar ele também passa
+- **VIOLENTO**: Se ele deixar o oponente com metade da resistencia força o oponente a passar.
 
 #
 
@@ -129,13 +136,9 @@ A imagem ficará guardada em BASE64 e deve ser convertida na hora de mostrar ao 
 #
 
 ### Felicidade
-O bew perde felicidade após perder batalhas e conforme o tempo passa, o user pode aumentar a felicidade de formas variadas.  
-(Construção...)
+O bew perde felicidade após perder batalhas e conforme o tempo passa, o user pode aumentar a felicidade de formas variadas. 
 
 #
 
 ### Item
 Cada bew poderá segurar uma carta de item que o afetará durante as batalhas.
-
-
-# =-=-=-=-=-=-=-=-= CONSTRUÇÃO =-=-=-=-=-=-=-=-=
