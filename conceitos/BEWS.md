@@ -44,7 +44,7 @@ O id "INS-001-H-12-C1-KISW-S1S200-15120645", significa que o bew tem:
 ### Tier
 "O tier é o quão forte um bew é", é um calculo feito após os dados do bew estiverem prontos, sendo:  
 ```((ataque + velocidade + acerto) / 7) + (resitencia / 13) + quantidadeDeHabilidades```  
-O resultado dessa conta sempre resultará entre 0 a 12. O tier também e responsável pela tamanho do bew, sendo 0 o menor e 13 o maior.
+O resultado dessa conta sempre resultará entre 0 a 12. O tier também e responsável pela tamanho do bew, sendo 0 o menor e 12 o maior.
 
 #
 
@@ -142,3 +142,9 @@ O bew perde felicidade após perder batalhas e conforme o tempo passa, o user po
 
 ### Item
 Cada bew poderá segurar uma carta de item que o afetará durante as batalhas.
+
+## Variações visuais dos bews:
+- **Raça**: Cada raça tem sua forma base definida.
+- **Cor**: Sendo 8 cores diferentes e 4 variações de intensidade de cada.
+- **Rosto**: Cada personalidade é referente a um rosto, totalizando 8.
+- **Tamanho**: O tamanho do bew é referente ao seu rank, quanto maior o rank, maior o bew será.
