@@ -118,10 +118,11 @@ Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As 
 #
 
 ### Status
-- **Ataque** (0 a 15): Quanto de força esse bew tem.
-- **Velocidade** (0 a 15): O bew mais rápido sempre ataca primeiro, caso um bew tenha o dobro da velocidade de outro ele bate duas vezes, o triplo três vezes, etc...
-- **Acerto** (0 a 15): A chance que um bew tem de acerto adicional.
-- **Resistência** (0 a 45): Quanto ele tem de vida antes de ser nocauteado.
+Os status são os pontos adicionais que cada bew tem que vai ser acrescentado ao status base. Por exemplo: Um bew com 12 pontos em ataque teria efeticamente 22 pontos durante a batalha, sendo 10 (base) somado a 12 (pontos adicionais).
+- **Ataque** (0 a 15): Quanto de força esse bew tem. Status base: 10.
+- **Velocidade** (0 a 15): O bew mais rápido ataca primeiro, caso um bew tenha o dobro da velocidade do oponente ele bate duas vezes, o triplo três vezes, etc. Status base: 10.
+- **Acerto** (0 a 15): A chance que um bew tem de acerto adicional. Status base: 80.
+- **Resistência** (0 a 45): Quanto ele tem de vida antes de ser nocauteado.  Status base: 80.
 
 #
 
