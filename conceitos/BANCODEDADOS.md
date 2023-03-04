@@ -69,9 +69,12 @@ Aqui se deve guardar os ids dos bews existentes, caso algum bew deixe de existir
   "..."
   ]
 ```
+
+#
+
 <details> 
-  <summary>**LINK PARA CONECTAR AO BANCO DE DADOS</summary>
-   mongodb+srv://API:VrxAzAus26iI3tas@cluster.yruie.mongodb.net/?retryWrites=true&w=majority
+	<summary><b>LINK PARA CONECTAR AO BANCO DE DADOS</b></summary>
+   <mark>mongodb+srv://API:VrxAzAus26iI3tas@cluster.yruie.mongodb.net/?retryWrites=true&w=majority</mark>
 </details>
 
 
