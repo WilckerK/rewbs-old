@@ -41,7 +41,7 @@ A collection de usuário deve conter as informações de todos as pessoas que se
 A collection de raças deve guardar todas as raças de bews possiveis. O objeto deve conter a imagem base da raça, o nome da raça, registro da raça e a posição onde o rosto de encontra
 ```json
 {
-  "registro": 001,
+  "registro": "001",
   "nome": "Psytal",
   "rosto": [100, 200],
   "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
