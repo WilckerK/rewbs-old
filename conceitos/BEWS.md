@@ -43,7 +43,7 @@ O id "INS-001-H-12-C1-KISW-S1S200-15120645", significa que o bew tem:
 
 ### Tier
 "O tier é o quão forte um bew é", é um calculo feito após os dados do bew estiverem prontos, sendo:
-`((ataque + velocidade + acerto) / 7) + (resitencia / 13) + quantidadeDeHabilidades`
+```((ataque + velocidade + acerto) / 7) + (resitencia / 13) + quantidadeDeHabilidades```
 O resultado dessa conta sempre resultará entre 0 a 12. O tier também e responsável pela tamanho do bew, sendo 0 o menor e 13 o maior.
 
 #
