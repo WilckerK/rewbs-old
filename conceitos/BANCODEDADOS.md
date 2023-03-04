@@ -57,4 +57,15 @@ A de cartas deve conter o nome da carta, o tipo de carta e o efeito salvo em str
   "efeito":
 }
 ```
-# =-=-=-=-=-=-=-=-= CONSTRUÇÃO =-=-=-=-=-=-=-=-=
+
+### Bews:
+Aqui se deve guardar os ids dos bews existentes, caso algum bew deixe de existir o id dele de ser deletado.
+```json
+{
+  "bewsRegistrados": [
+  "INS000H12C1KISWS1S2I115151545",
+  "CUR001F03G2STBER3000002011502",
+  "ALE004X12D4CLCYB1000011071226",
+  ...
+  ]
+```
