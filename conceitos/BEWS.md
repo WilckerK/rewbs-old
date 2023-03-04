@@ -33,8 +33,8 @@ O id "INS-001-H-12-C1-KISW-S1S200-15120645", significa que o bew tem:
 - "S1S200" tem as habilidades S1 e S2. 00 é o placeholder
 - "15120645" significa 15 de ataque, 12 de velocidade, 6 de acerto e 45 de resistencia
 
-> **Todo o bew é básicamente seu id, as informações váriaveis ficam salvas no objeto do user, de resto o bew não terá o objeto salvo no banco de dados, apenas o seu id e as Aletráveis. Para saber as caracteristicas de um bew deve se converter por uma classe pelo id.*
-> **DB para armazenar IDs para fazer query**
+> - **Todo o bew é básicamente seu id, as informações váriaveis ficam salvas no objeto do user, de resto o bew não terá o objeto salvo no banco de dados, apenas o seu id e as Aletráveis. Para saber as caracteristicas de um bew deve se converter por uma classe pelo id.*<br>
+> - **DB para armazenar IDs para fazer query**
 #
 
 ### Rank
