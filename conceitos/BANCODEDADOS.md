@@ -66,6 +66,12 @@ Aqui se deve guardar os ids dos bews existentes, caso algum bew deixe de existir
   "INS000H12C1KISWS1S2I115151545",
   "CUR001F03G2STBER3000002011502",
   "ALE004X12D4CLCYB1000011071226",
-  ...
+  "..."
   ]
 ```
+<details> 
+  <summary>**LINK PARA CONECTAR AO BANCO DE DADOS</summary>
+   mongodb+srv://API:VrxAzAus26iI3tas@cluster.yruie.mongodb.net/?retryWrites=true&w=majority
+</details>
+
+
