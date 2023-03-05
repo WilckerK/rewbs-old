@@ -16,6 +16,7 @@ app.config['MONGO_URI'] = os.getenv(f'MONGO_URI_{environment}') # MONGO_URI=mong
 mongo.init_app(app) # inicializar o mongo
 db = mongo.db
 
+
 bew = Bew() # Precise inicializar por causa dos dict que estão no constructor
 importRoutes() # Registra as rotas em seus respectivos caminhos
 
