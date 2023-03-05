@@ -1,15 +1,9 @@
-from __main__ import app, db, bew, secret_key
+from __main__ import api, db, bew, secret_key
 from flask import jsonify, request
-
-@app.route('/api/summon', methods=['GET']) # GET -> Pegar valor
-def summon():
-	response = bew.summon_bew()
-	return jsonify(response) # Transforma em JSON
-
 
 # curl -X POST -H "Content-Type: application/json" -d '{"message": "ola"}' http://localhost:5000/api/echo
 # curl -X POST -H "Content-Type: application/json" -d '{"userId": "6403ac5003f8e40841a1b105", "userId2": "6403aca303f8e40841a1b106", "bewId": "123", "bewId2": "321", "secret_key": "CHAVESUPERSECRETA321123"}' http://localhost:5000/api/trade
-@app.route('/api/trade', methods=['POST']) # POST -> Passar valor
+@api.route('/trade', methods=['POST']) # POST -> Passar valor
 def trade():
 	data = request.json
 	print(data)
