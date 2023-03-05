@@ -11,6 +11,11 @@ app = Flask(__name__)
 app.config['MONGO_URI'] = os.getenv('MONGO_URI_TEST')
 db = PyMongo(app).db
 
+"""
+from pymongo import MongoClient
+client = MongoClient("mongodb+srv://API:VrxAzAus26iI3tas@cluster.yruie.mongodb.net/test?retryWrites=true&w=majority")
+db = client.test
+"""
 
 bew = Bew() # Precise inicializar por causa dos dict que estão no constructor
 
