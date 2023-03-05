@@ -31,7 +31,7 @@ app.register_blueprint(admin, url_prefix="/admin")
 """
 from pymongo import MongoClient
 client = MongoClient("mongodb+srv://API:VrxAzAus26iI3tas@cluster.yruie.mongodb.net/test?retryWrites=true&w=majority")
-db = client.users
+db = client.test
 """
 
 # "mongodb+srv://vako:Senha-Database321@datacluster.nqb0w6x.mongodb.net/rebtest?retryWrites=true&w=majority"
