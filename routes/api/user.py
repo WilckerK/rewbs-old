@@ -1,11 +1,10 @@
-@app.route('/api/query_user_bew', methods=['POST']) # POST -> Passar valor
-def query_user_bew():
+@app.route('/api/user', methods=['POST']) # POST -> Passar valor
+def user():
 	data = request.json # Get request
 
 	# Check if have necessary values
 	if sorted(list(data.keys())) != ['bewId', 'userId']:
 		return response_code('400')
-
 
 	# Get response
 	response = bew.query_user_bew(data, db)
