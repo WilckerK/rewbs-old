@@ -25,6 +25,7 @@ Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas d
 - Mercado -> Confirmar compras de rewbs.
 - [Banco de Dados](https://github.com/WilckerK/rewbs/blob/main/BANCODEDADOS.md) -> Passar as informações do db.
 - Trocas -> Trocas de bews entre jogadores.
+- Libertar -> Libertar um bew, fazendo ele ser deletado do banco de dados.
 
 ## Development
 
@@ -136,6 +137,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 - Algum tipo de mensalidade que dê benefícios ao user, como pacotes e rewbs bonus no começo do mês.
 - Cosméticos.
 - Alimentar os bews para aumentar a felicidade.
+- Prêmios conforme passa de level.
 
 **As notas são ideias não acabadas sobre adições ao projeto.*
 
