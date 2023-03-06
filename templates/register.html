@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rebwellion | Registerr</title>
+{% endblock %}
+
+
+{% block body %}
+<form action='/register' method='POST'>
+	<input type='text' name='email' id='email' placeholder='email'/>
+	<input type='text' name='username' id='username' placeholder='username'/>
+	<input type='password' name='pwd' id='pwd' placeholder='password'/>
+	<input type='password' name='password' id='password' placeholder='Confirme a senha'/>
+	<input type='submit' name='submit'/>
+</form>
+{% endblock %}

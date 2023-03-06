@@ -1,25 +1,40 @@
 import os
-from flask import Blueprint
+from flask import Blueprint, redirect, url_for
+from flask_login import current_user
 
-# esse arquivo faz o from route import * importar todas as rotas e cria as blueprints
-
-api = Blueprint("api", __name__)
-dashboard = Blueprint("dashboard", __name__)
+# Create Blueprints
+api = Blueprint('api', __name__)
+dashboard = Blueprint('dashboard', __name__)
+home = Blueprint('home', __name__)
 admin = Blueprint("admin", __name__)
 
-def importRoutes():
-  path = os.path.dirname(__file__)
-  for route in os.scandir(path):
-    if route.name.startswith("__"):
-      continue 
+# Executado antes de ir para qualquer página do dashboard
+@dashboard.before_request
+def restrict_to_logged_users():
+	print(current_user.is_authenticated)
+	if not current_user.is_authenticated: # Not logged in
+		return redirect(url_for('index'))
 
-    if route.is_file():
-      string = f'import routes.{route.name}'[:-3]
-      exec(string)
-      continue
-    
-    for subRoute in os.scandir(f'{path}/{route.name}'):
-      if subRoute.name.startswith("__"):
-        continue 
-      string = f'import routes.{route.name}.{subRoute.name}'[:-3]
-      exec(string)
+@admin.before_request
+def restrict_to_admins():
+	print(current_user.is_admin)
+	if not current_user.is_authenticated or not current_user.is_admin: # Not logged in
+		return redirect(url_for('index'))
+
+# Precisa ser em uma função, não sei explicar, mas precisa ser numa função, senão da erro, porque não importou tudo primeiro
+def import_routes():
+	for root, dirs, files in os.walk('routes'):
+		for file in files:
+
+			# Ignore self and functions file
+			if str(file).startswith('_'):
+				continue
+
+			# print(file)
+			if file.endswith('.py'):
+				# Get path to routes
+				route_path = os.path.join(root, file[:-3]).replace('/', '.')
+				# print(route_path)
+
+				# Import routes
+				__import__(f'{route_path}', fromlist=[''])
