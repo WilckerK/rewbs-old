@@ -1,7 +1,7 @@
 from __main__ import api, db, bew, secret_key
 from flask import jsonify, request
 
-@api.route('/api/user', methods=['POST']) # POST -> Passar valor
+@api.route('/user', methods=['POST']) # POST -> Passar valor
 def user():
 	data = request.json # Get request
 
