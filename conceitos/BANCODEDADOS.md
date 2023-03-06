@@ -53,14 +53,14 @@ Aqui se deve guardar os ids dos bews existentes e as raças, o primeiro registro
 {
   "_id": "001",
   "nome": "Psytal",
-  "bras": ["KI", "SW"],
+  "bras": ["KI", "SM", "BO", "CA"],
   "rosto": [100, 200],
   "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
 },
 {
   "_id": "002",
   "nome": "Rulio",
-  "bras": ["BE", "KI"],
+  "bras": ["BE", "KI", "SW"],
   "rosto": [400, 80],
   "imagem": "sfadfadfarkgjoush97fsg8yfbisasfasfi7ygefiku="
 },
