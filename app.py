@@ -1,10 +1,9 @@
 import os
-
 from flask import Flask
 from dotenv import load_dotenv # Get .env
 from static.scripts.database import mongo
 from static.scripts.bew import Bew
-from routes import admin, api, dashboard, home, import_routes
+from routes import admin, api, dashboard, import_routes
 
 load_dotenv(dotenv_path='.env') # Load .env
 secret_key = os.getenv('SECRET_KEY')
@@ -16,14 +15,6 @@ app.config['MONGO_URI'] = os.getenv(f'MONGO_URI_{environment}') # MONGO_URI=mong
 # MONGO_URI_DEV é a db test / MONGO_URI_PROD é a db database
 mongo.init_app(app) # inicializar o mongo
 db = mongo.db
-
-
-bew = Bew() # Precise inicializar por causa dos dict que estão no constructor
-importRoutes() # Registra as rotas em seus respectivos caminhos
-
-app.register_blueprint(api, url_prefix="/api") 
-app.register_blueprint(dashboard, url_prefix="/dashboard")
-app.register_blueprint(admin, url_prefix="/admin")
 
 # as blueprints são para modular e separar rotas, url prefix define o prefixo q toda rota vai ter
 # por exemplo uma rota "/macaco" criada dentro da blueprint de /api, será acessada com /api/macaco
@@ -40,7 +31,6 @@ import_routes()
 app.register_blueprint(admin, url_prefix='/admin')
 app.register_blueprint(api, url_prefix='/api') 
 app.register_blueprint(dashboard, url_prefix='/dashboard')
-app.register_blueprint(home, url_prefix='/home')
 
 """
 TODO:
