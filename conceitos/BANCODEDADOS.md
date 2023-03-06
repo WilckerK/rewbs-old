@@ -14,6 +14,7 @@ A collection de usuário deve conter as informações de todos as pessoas que se
 	"discordId": "34534536363456",
 	"exp": 87987,
 	"rewbs": 1340,
+	"daily": "2023-03-06T22:21:42Z",
 	"bews":[
 		{
 			"nome":"Rebew", 
