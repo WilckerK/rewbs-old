@@ -5,7 +5,6 @@ from flask_login import current_user
 # Create Blueprints
 api = Blueprint('api', __name__)
 dashboard = Blueprint('dashboard', __name__)
-home = Blueprint('home', __name__)
 admin = Blueprint("admin", __name__)
 
 # Executado antes de ir para qualquer página do dashboard
