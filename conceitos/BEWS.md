@@ -90,7 +90,8 @@ Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensi
 #
 
 ### Brasão
-> Mudar o nome para Tipo?
+> Mudar o nome para Tipo?  
+
 Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí um brasão.
 | Sigla | Nome | Descrição |
 | ------ | -------- | ------------- |
@@ -111,7 +112,8 @@ Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí
 | **FO** | Fortune | Fortuna, dinheiro, capital, ouro, riquezas, ganância...
 | **AN** | Ancient | Ancião, velho, antigo, esquecido, desgastado, passado...
 
-> Talvez adicionar Brasas e Tsunami e talvez remover
+> Talvez adicionar Brasas e Tsunami e talvez remover  
+
 #
 
 ### Habilidades
