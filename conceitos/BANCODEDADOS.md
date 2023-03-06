@@ -43,6 +43,7 @@ A collection de raças deve guardar todas as raças de bews possiveis. O objeto 
 {
   "registro": "001",
   "nome": "Psytal",
+  "bras": ["KI", "SW"],
   "rosto": [100, 200],
   "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
 }
