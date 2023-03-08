@@ -4,8 +4,8 @@ from flask_login import current_user
 
 # Create Blueprints
 api = Blueprint('api', __name__)
-dashboard = Blueprint('dashboard', __name__)
-admin = Blueprint("admin", __name__)
+dashboard = Blueprint('dashboard', __name__, template_folder='templates/dashboard')
+admin = Blueprint("admin", __name__, template_folder='templates/admin')
 
 # Executado antes de ir para qualquer página do dashboard
 @dashboard.before_request
