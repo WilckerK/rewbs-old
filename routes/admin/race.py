@@ -1,5 +1,5 @@
 import base64
-from flask import Flask, jsonify, request, render_template, url_for
+from flask import jsonify, request, render_template
 from __main__ import admin, db
 
 @admin.route('/race', methods=['GET', 'POST'])
