@@ -1,5 +1,4 @@
 from flask import Flask, jsonify, request, render_template, url_for
-from flask_pymongo import PyMongo
 from __main__ import admin, db
 
 @admin.route('/race', methods=['GET', 'POST'])
