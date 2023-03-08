@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, request, render_template, url_for
 from flask_pymongo import PyMongo
+from __main__ import admin
 
-@app.route('/race', methods=['GET', 'POST'])
+@admin.route('/race', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         _id = f'{db.bews.count_document({}):03d}'
