@@ -6,6 +6,7 @@ from flask_login import LoginManager
 
 from dotenv import load_dotenv
 
+from static.scripts.mongo import Mongo
 from static.scripts.bew import Bew
 from static.scripts.login import User
 
@@ -21,16 +22,16 @@ app.config['MONGO_URI'] = os.getenv('MONGO_URI_TEST')
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 # Init db
-db = PyMongo(app).db
+db = Mongo(app).database()
 
 # Flask-Login Init
 user_login = User(app, db) # Eu ia chamar de login_user, mas flask_login já tem um método com esse nome
 
 # Other files
 bew = Bew() # Precise inicializar por causa dos dict que estão no constructor
-import_routes()
 
 # Register blueprints
+import_routes()
 app.register_blueprint(admin, url_prefix='/admin')
 app.register_blueprint(api, url_prefix='/api') 
 app.register_blueprint(dashboard, url_prefix='/dashboard')
@@ -38,7 +39,7 @@ app.register_blueprint(home, url_prefix='/home')
 
 """
 TODO:
-- Se inputs em /login ou /register estiverem vazios, dar um aviso
+- Se inputs em /login, /register, /admin/race estiverem vazios, dar um aviso
 - Verificar se as duas senhas em /register são iguais antes de fazer o reigstro
 """
 
@@ -69,3 +70,11 @@ Pymongo useful things
 
 if __name__ == '__main__':
 	app.run(debug=True)
+
+
+"""
+  _   ,_,   _
+ / `'=) (='` \
+/.-.-.\ /.-.-.\ 
+`      "      `
+"""

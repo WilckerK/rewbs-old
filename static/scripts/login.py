@@ -20,7 +20,7 @@ Ignora, ainda estou trabalhando nisso
 class User(UserMixin):
 	def __init__(self, app, db):
 		self.db = db
-		self.admins = ['raimundo@gmail.com']
+		self.admins = ['email@gmail.com']
 
 		# Init
 		login_manager = LoginManager()
@@ -35,7 +35,9 @@ class User(UserMixin):
 
 			# user = User()
 			# user.id = email
-			self.id = email
+			self.id = user['_id']
+			self.email = email
+			self.name = user['name']
 			self.is_admin = True if email in self.admins else False
 			return self
 

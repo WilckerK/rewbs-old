@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Rebwellion | Add race</title>
+<style>
+	fieldset {
+		border-radius: 5px;
+		border-color: black;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 30%;
+	}
+
+	input {
+		border: 1px solid #dadce0;
+		border-radius: 4px;
+		box-shadow: 0 0 0 transparent;
+		font-size: 16px;
+		line-height: 24px;
+		outline: transparent;
+		padding: 11px 16px;
+		margin-bottom: 16px;
+		width: 92%;
+		outline: none;
+		letter-spacing: 1px;
+	}
+
+	.face input {
+		display: inline-block;
+		margin: !important 10px;
+		width: 30px;
+		height: 10px;
+
+	}
+
+	.button {
+		width: 100%;
+		color: blueviolet;
+		cursor: pointer;
+	}
+
+	body {
+		background-color: royalblue;
+	}
+</style>
+{% endblock %}
+
+
+{% block body %}
+<fieldset>
+	<form action="{{ url_for('admin.race') }}" method='POST' enctype="multipart/form-data"> <!-- multipart/form-data é necessario para conseguir upar imagem -->
+		<label>Nome</label>
+		<input type="text" name="name">
+
+		<label>Posição do Rosto</label>
+		<div class="face">
+			<input type="text" pattern="\d*" maxlength="3" name="faceX">
+			<input type="text" pattern="\d*" maxlength="3" name="faceY">
+		</div>
+		
+		<label>Imagem</label>
+		<input type="file" name="image">
+
+		<label>Types</label>
+		<input type="text" pattern="[A-Za-z0-9]+,.*[A-Za-z0-9]+,.*[A-Za-z0-9]+" name="types">
+
+		<label>Skills</label>
+		<input type="text" name="skills">
+		
+		<input class="button" type="submit" onsubmit="required()">
+	</form>
+</fieldset>
+{% endblock %}
