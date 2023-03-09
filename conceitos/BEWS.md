@@ -10,7 +10,7 @@ As propriedades fixas são geradas durante o "nascimento" do bew e não podem se
 - sexo
 - personalidade
 - cor
-- brasão
+- tipos
 - habilidades
 - ataque, velocidade, acerto, resistencia
 
@@ -33,7 +33,7 @@ O id "INS-001-H-12-C1-KISW-S1S200-15120645", significa que o bew tem:
 - "H" sexo hermafrodita
 - "12" ele tem tier 12
 - "C1" dentre as variações de cor ele é a C1 (C é vermelho e 1 de intensidade)
-- "K1SW" ele tem os brasões "KI" (King) e "SW" (Sword)
+- "K1SW" ele tem os tipos "KI" (King) e "SW" (Sword)
 - "S1S200" tem as habilidades S1 e S2. 00 é o placeholder
 - "15120645" significa 15 de ataque, 12 de velocidade, 6 de acerto e 45 de resistencia
 
@@ -89,35 +89,17 @@ Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensi
 
 #
 
-### Brasão
+### Types
 > Mudar o nome para Tipo?  
 
-Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí um brasão.
-| Sigla | Nome | Descrição |
-| ------ | -------- | ------------- |
-| **KI** | King | Rei, monarquia, poder político, chefe da tribo, reino, líder...
-| **SW** | Sword | Espada, facas, armas brancas, guerra, violência, agressão, revolta...
-| **MU** | Music | Musica, arte, melodia, harmonia, ordem, esculturas...
-| **GE** | Gear | Engrenagem, máquinas, fábricas, armas de fogo, metal, robôs...
-| **SM** | Smile | Sorriso, alegria, humor, juventude, festa, inocencia...
-| **GO** | Goodness | Bondade, benevolencia, anjelical, religioso, santo...
-| **BO** | Book | Livro, conhecimento, estudos, psiquico, mental...
-| **BE** | Beast | Besta, fera, animal, voraz, monstro, irracional...
-| **RO** | Roses | Rosas, plantas, paixão, natureza, amor, sedução...
-| **CA** | Catalyst | Catalizador, químico, mágico, intensificar, poções...
-| **MI** | Mistery | Mistério, bruxaria, oculto, maligno, criminoso...
-| **ST** | Star | Estrela, espaço, luz, planetas, fama, iluminado...
-| **CL** | Cloud | Nuvem, voar, ar, ventos, clima, alto, leve...
-| **CY** | Cyber | Cibernético, tecnologia, software, elétrico, moderno...
-| **FO** | Fortune | Fortuna, dinheiro, capital, ouro, riquezas, ganância...
-| **AN** | Ancient | Ancião, velho, antigo, esquecido, desgastado, passado...
+Existem 18 tipos no total, cada bew possui dois tipos e cada carta possuí um tipos.
+(Tipos)[https://github.com/WilckerK/rewbs/blob/main/conceitos/TIPOS.md]
 
-> Talvez adicionar Brasas e Tsunami e talvez remover  
 
 #
 
 ### Habilidades
-Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao brasão na hora da invocação, por exemplo, um bew do brasão "RO" (Roses), vir com as habilidades paixão e emocional. 
+Cada bew pode ter entre 0 a 3 habilidades, elas interagem durante a batalha. As habilidades tendem a ser referentes ao tipos na hora da invocação, por exemplo, um bew do tipos "RO" (Roses), vir com as habilidades paixão e emocional. 
 
 #
 
