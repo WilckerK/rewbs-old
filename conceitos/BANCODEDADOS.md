@@ -54,14 +54,14 @@ Aqui se deve guardar os ids dos bews existentes e as raças, o primeiro registro
 {
   "_id": "001",
   "nome": "Psytal",
-  "bras": ["KI", "SM", "BO", "CA"],
+  "types": ["KI", "SM", "BO", "CA"],
   "rosto": [100, 200],
   "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
 },
 {
   "_id": "002",
   "nome": "Rulio",
-  "bras": ["BE", "KI", "SW"],
+  "types": ["BE", "KI", "SW"],
   "rosto": [400, 80],
   "imagem": "sfadfadfarkgjoush97fsg8yfbisasfasfi7ygefiku="
 },
@@ -69,11 +69,11 @@ Aqui se deve guardar os ids dos bews existentes e as raças, o primeiro registro
 ```
 
 ### Cartas:
-A de cartas deve conter o nome da carta, o tipo de carta e o efeito salvo em string.
+A de cartas deve conter o nome da carta, a categoria da carta e o efeito salvo em string.
 ```json
 {
   "nome": "Agrotóxico",
-  "tipo": "Resposta",
+  "category": "Resposta",
   "efeito":
 }
 ```
