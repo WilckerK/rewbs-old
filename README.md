@@ -78,7 +78,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 }
 ```
 ### Cartas:
-- **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Adestramento", caso seu bew do brasão Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
+- **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Adestramento", caso seu bew do tipo Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
 
 - **Mapa**: São cartas que tem seu efeito ativo no começo de cada turno, por exemplo: "Berçário", no começo de cada turno o bew de maior rank em campo tem seus status cortados pela metade até o final do turno.
 
