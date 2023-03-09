@@ -24,3 +24,28 @@ Existem 16 brasões no total, cada bew possui dois brasões e cada carta possuí
 |**EM**| Ember | Brasas, Fogo, calor, quente, lava, queimar...
 > Talvez adicionar Brasas e Tsunami e talvez remover  
 #
+
+```js
+
+{ //sigla, efetivo (bate forte) e inefetivo (bate fraco)
+ "KI": [["KI", "SW", "FO"], ["ST", "RO", "GO"]],
+ "SW": [["SM", "BE", "MI"], ["GE", "BO"]],
+ "MU": [["SM", "GO"],       ["BO", "AN", "SM"]],
+ "GE": [["CL", "CY"],       ["MU", "BO", "FO"]],
+ "SM": [["AN", "RO"],       ["SW", "GO"]],
+ "GO": [["KI", "ST"],       ["SW", "SM"]],
+ "BO": [["CA", "SW"],       ["KI", "MU"]],
+ "BE": [["RO", "FO", "CY"], ["AN", "CL", "GE"]],
+ "RO": [["TS", "CA", "ST"], ["GE", "EM"]],
+ "CA": [["ST", "MU", "FO"], ["MI", "GO"]],
+ "MI": [["CA", "EM", "GO"], ["ST", "MU"]],
+ "ST": [["MI", "TS", "CL"], ["CA", "EM"]],
+ "EM": [["RO", "BO", "GE"], ["TS", "CL", "MI"]],
+ "TS": [["EM", "BO"],       ["BE", "RO", "CA"]],
+ "CL": [["RO", "MU"],       ["CL", "TS", CY]],
+ "CY": [["AN", "BO", "CA"], ["FO", "TS", "SM"]],
+ "FO": [["GO", "SW"],       ["FO", "BE"]],
+ "AN": [["SM", "GE"],       ["KI", "AN", "CY"]],
+}
+
+```
