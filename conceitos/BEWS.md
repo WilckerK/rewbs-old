@@ -90,7 +90,6 @@ Pode váriar entre 8 váriações, e cada variação existe 4 níveis de intensi
 #
 
 ### Types
-> Mudar o nome para Tipo?  
 
 Existem 18 tipos no total, cada bew possui dois tipos e cada carta possuí um tipos.  
 [Tipos Conceito](https://github.com/WilckerK/rewbs/blob/main/conceitos/TIPOS.md)
