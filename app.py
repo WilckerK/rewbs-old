@@ -14,7 +14,8 @@ app = Flask(__name__, instance_relative_config=True)
 app.config['MONGO_URI'] = os.getenv(f'MONGO_URI_{environment}') # MONGO_URI=mongodb+srv://API:VrxAzAus26iI3tas@cluster.yruie.mongodb.net/{-> NOME DA DATABASE<-}?retryWrites=true&w=majority
 # MONGO_URI_DEV é a db test / MONGO_URI_PROD é a db database
 mongo.init_app(app) # inicializar o mongo
-db = mongo.db
+
+db = Mongo(app).database()
 
 # as blueprints são para modular e separar rotas, url prefix define o prefixo q toda rota vai ter
 # por exemplo uma rota "/macaco" criada dentro da blueprint de /api, será acessada com /api/macaco
@@ -58,3 +59,10 @@ Pymongo useful things
 if __name__ == '__main__':
 	if environment == "DEV": app.run(debug=True)
 	else: app.run()
+
+"""
+  _   ,_,   _
+ / `'=) (='` \
+/.-.-.\ /.-.-.\ 
+`      "      `
+"""

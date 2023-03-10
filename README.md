@@ -49,7 +49,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 {
 	"name": "Iberê",
 	"email": "manualdomundo@gmail.com",
-	"senha": "3fw4fwrffwefsddff3aw2"
+	"senha": "3fw4fwrffwefsddff3aw2",
 	"id": "lfhgolsnvoh8u494hfkjf466sh",
 	"discordId": "34534536363456",
 	"exp": 87987,

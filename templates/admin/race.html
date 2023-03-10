@@ -1,70 +1,32 @@
-<!DOCTYPE html>
-<html>
-    <title>API</title>
-<body>
-    <style>
-        fieldset {
-            border-radius: 5px;
-            border-color: black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 30%;
-        }
+{% extends 'base_admin.html' %}
 
-        input {
-            border: 1px solid #dadce0;
-		    border-radius: 4px;
-		    box-shadow: 0 0 0 transparent;
-		    font-size: 16px;
-		    line-height: 24px;
-		    outline: transparent;
-		    padding: 11px 16px;
-		    width: 92%;
-		    outline: none;
-		    letter-spacing: 1px;
-        }
+{% block head %}
+<title>Rewbs | Add race</title>
+{% endblock %}
 
-        .button {
-            width: 100%;
-            color: blueviolet;
-            cursor: pointer;
-        }
 
-        body {
-            background-color: royalblue;
-        }
-    </style>
-    <fieldset>
-        <form method="post"  action="{{url_for('index')}}">
-            <label>Nome</label>
-            <br>
-            <input type="text" name="name">
-            <br>
-            <br>
-            <label>Posição do Rosto</label>
-            <br>
-            <input type="text" name="rosto">
-            <br>
-            <br>
-            <label>Imagem</label>
-            <br>
-            <input type="image" name="imagem">
-            <br>
-            <br>
-            <label>Brasão</label>
-            <br>
-            <input type="text" name="brasão">
-            <br>
-            <br>
-            <label>Skills</label>
-            <br>
-            <input type="text" name="skills">
-            <br>
-            <br>
-            <input class="button" type="submit">
-        </form>
-    </fieldset>
-</body>
-</html>
+{% block body %}
+<fieldset>
+	<form action="{{ url_for('admin.race') }}" method='POST' enctype="multipart/form-data"> <!-- multipart/form-data é necessario para conseguir upar imagem -->
+		<label>Nome</label>
+		<input type="text" name="name">
+
+		<label>Posição do Rosto</label>
+		<div class="face">
+			<input type="text" pattern="\d*" maxlength="3" name="faceX">
+			<input type="text" pattern="\d*" maxlength="3" name="faceY">
+		</div>
+		
+		<label>Imagem</label>
+		<input type="file" name="image">
+
+		<label>Types</label>
+		<input type="text" pattern="[A-Za-z0-9]+,.*[A-Za-z0-9]+,.*[A-Za-z0-9]+" name="types">
+
+		<label>Skills</label>
+		<input type="text" name="skills">
+		
+		<input class="button" type="submit">
+	</form>
+</fieldset>
+{% endblock %}

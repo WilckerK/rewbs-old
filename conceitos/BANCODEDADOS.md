@@ -74,6 +74,7 @@ A de cartas deve conter o nome da carta, a categoria da carta e o efeito salvo e
 {
   "nome": "Agrotóxico",
   "category": "Resposta",
+  "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku=",
   "efeito":
 }
 ```
