@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, request
 from flask_pymongo import PyMongo
 from flask_login import LoginManager
 
@@ -35,13 +35,20 @@ import_routes()
 app.register_blueprint(admin, url_prefix='/admin')
 app.register_blueprint(api, url_prefix='/api') 
 app.register_blueprint(dashboard, url_prefix='/dashboard')
-app.register_blueprint(home, url_prefix='/home')
+app.register_blueprint(home)
+
+
+if __name__ == '__main__':
+  app.run(debug=True)
 
 """
 TODO:
-- Se inputs em /login, /register, /admin/race estiverem vazios, dar um aviso
+- Se inputs em /login, /register, /admin/race, /admin/card, /admin/skill estiverem vazios, dar um aviso
 - Verificar se as duas senhas em /register são iguais antes de fazer o reigstro
 """
+
+
+
 
 
 
@@ -65,12 +72,6 @@ Pymongo useful things
 # mongo.db.users.find({"online": True}) -> Achar todo obj com "online": True
 # user = mongo.db.users.find_one_or_404({"_id": username}) -> Procurar por um obj, se não achar dar erro 404
 """
-
-
-
-if __name__ == '__main__':
-	app.run(debug=True)
-
 
 """
   _   ,_,   _
