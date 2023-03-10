@@ -1,0 +1,5 @@
+flask
+flask_pymongo
+flask_login
+python_dotenv
+
