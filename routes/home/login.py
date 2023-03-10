@@ -1,12 +1,12 @@
-from __main__ import app, user_login
+from __main__ import home, user_login
 from flask import render_template, request, redirect, url_for
 from flask_login import login_user
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@home.route('/login', methods=['GET', 'POST'])
 def login():
 	if request.method == 'GET':
-		return render_template('login.html')
+		return render_template('home/login.html')
 
 	email = request.form['email']
 	print(email)
@@ -19,4 +19,4 @@ def login():
 		user_login.id = email
 		login_user(user_login)
 		return redirect('dashboard')
-	return render_template('login.html')
+	return render_template('home/login.html')
