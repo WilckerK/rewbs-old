@@ -25,6 +25,7 @@ Introdução básica, os bews são bichinhos digitais "NFTs" (NFTs entre aspas d
 - Mercado -> Confirmar compras de rewbs.
 - [Banco de Dados](https://github.com/WilckerK/rewbs/blob/main/BANCODEDADOS.md) -> Passar as informações do db.
 - Trocas -> Trocas de bews entre jogadores.
+- Libertar -> Libertar um bew, fazendo ele ser deletado do banco de dados.
 
 ## Development
 
@@ -48,7 +49,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 {
 	"name": "Iberê",
 	"email": "manualdomundo@gmail.com",
-	"senha": "3fw4fwrffwefsddff3aw2"
+	"senha": "3fw4fwrffwefsddff3aw2",
 	"id": "lfhgolsnvoh8u494hfkjf466sh",
 	"discordId": "34534536363456",
 	"exp": 87987,
@@ -77,7 +78,7 @@ Desenvolver a API, certificando-se de que a aplicação que está acessando é v
 }
 ```
 ### Cartas:
-- **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Adestramento", caso seu bew do brasão Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
+- **Resposta**: São cartas que interagem durante a batalha (famosas cartas rápidas, magias instantâneas, armadilhas), como por exemplo: "Adestramento", caso seu bew do tipo Fera seja atacado por um ataque efetivo, seu próximo ataque será causará 3 vezes o dano.
 
 - **Mapa**: São cartas que tem seu efeito ativo no começo de cada turno, por exemplo: "Berçário", no começo de cada turno o bew de maior rank em campo tem seus status cortados pela metade até o final do turno.
 
@@ -136,6 +137,7 @@ Resultado vê quem ganhou e lhe dá rewbs e exp, além de retirar exp de quem pe
 - Algum tipo de mensalidade que dê benefícios ao user, como pacotes e rewbs bonus no começo do mês.
 - Cosméticos.
 - Alimentar os bews para aumentar a felicidade.
+- Prêmios conforme passa de level.
 
 **As notas são ideias não acabadas sobre adições ao projeto.*
 

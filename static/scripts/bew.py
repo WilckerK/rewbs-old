@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import random, os, base64
 from io import BytesIO
 from flask_pymongo import ObjectId
@@ -5,6 +6,11 @@ from .api import response_code
 from PIL import Image, ImageEnhance
 from .mongo import Mongo
 
+=======
+import random
+from flask_pymongo import ObjectId
+from .api import response_code
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 
 class Bew:
 	def __init__(self):
@@ -19,6 +25,7 @@ class Bew:
 			"INS": "Insano"
 		}
 
+<<<<<<< HEAD
 		self.types_dict = {
 			"KI": { "name": "King",     "description": "Rei, poder político, chefe da tribo, reino, líder",    "types": [ ["SW","KI"], ["ST","RO"], ["SM","FO"] ], "emoji": '👑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645349535884/1.png'  },
 			"SW": { "name": "Sword",    "description": "Espada, facas, armas brancas, guerra, violência",      "types": [ ["BE","RO"], ["BO","MI"], ["MU","SM"] ], "emoji": '⚔️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645781536868/2.png'  },
@@ -86,6 +93,51 @@ class Bew:
 			"R3": { "name": "Reproduzir",  "types": ['MU','GO','BE'] },
 			"I1": { "name": "Imunidade",   "types": ['KI','BE','CA'] },
 			"B1": { "name": "Brilhante",   "types": ['ST','CY','FO'] },
+=======
+		self.brasoes_dict = {
+			"KI" :{ "name": "King",     "bras": [ ["SW","KI"], ["ST","RO"], ["SM","FO"] ], "emoji": '👑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645349535884/1.png'  },
+			"SW" :{ "name": "Sword",    "bras": [ ["BE","RO"], ["BO","MI"], ["MU","SM"] ], "emoji": '⚔️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645781536868/2.png'  },
+			"MU" :{ "name": "Music",    "bras": [ ["SM","MU"], ["SW","GE"], ["GO","ST"] ], "emoji": '🎵', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558646259687475/3.png'  },
+			"GE" :{ "name": "Gear",     "bras": [ ["CY","SW"], ["CL","CA"], ["BE","MU"] ], "emoji": '⚙️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558646754623559/4.png'  },
+			"SM" :{ "name": "Smile",    "bras": [ ["GO","BO"], ["KI","SW"], ["CL","GO"] ], "emoji": '🙂', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558755869425746/5.png'  },
+			"GO" :{ "name": "Goodness", "bras": [ ["KI","MI"], ["MU","SM"], ["BE","CA"] ], "emoji": '💚', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558756255318136/6.png'  },
+			"BO" :{ "name": "Book",     "bras": [ ["FO","MU"], ["BE","CY"], ["SW","MI"] ], "emoji": '📙', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558756607639763/7.png'  },
+			"BE" :{ "name": "Beast",    "bras": [ ["AN","BE"], ["GO","GE"], ["BO","ST"] ], "emoji": '🐾', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558757022875688/8.png'  },
+			"RO" :{ "name": "Roses",    "bras": [ ["SM","CL"], ["AN","FO"], ["CL","KI"] ], "emoji": '🌹', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831106863244/9.png'  },
+			"CA" :{ "name": "Catalyst", "bras": [ ["ST","CY"], ["CA","GO"], ["GE","CA"] ], "emoji": '⚗️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831517900930/10.png' },
+			"MI" :{ "name": "Mistery",  "bras": [ ["CA","FO"], ["BO","AN"], ["CY","SW"] ], "emoji": '🌑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831924748308/11.png' },
+			"ST" :{ "name": "Star",     "bras": [ ["MI","RO"], ["BE","MU"], ["AN","KI"] ], "emoji": '🌟', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558832373542992/12.png' },
+			"CL" :{ "name": "Cloud",    "bras": [ ["GE","ST"], ["SM","RO"], ["AN","GE"] ], "emoji": '☁️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558922551070760/13.png' },
+			"CY" :{ "name": "Cyber",    "bras": [ ["CL","AN"], ["CY","MI"], ["CY","BO"] ], "emoji": '📱', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558923054383154/14.png' },
+			"FO" :{ "name": "Fortune",  "bras": [ ["GE","GO"], ["FO","KI"], ["FO","RO"] ], "emoji": '💰', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558923549311047/15.png' },
+			"AN" :{ "name": "Ancient",  "bras": [ ["BO","CA"], ["ST","CL"], ["MI","RO"] ], "emoji": '⏳', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558924056825916/16.png' }
+		}
+
+		self.skills_dict = {
+			"S1": { "name": "Soberano",    "bras": ['KI','AN']      },
+			"S2": { "name": "Sob Pressão", "bras": ['KI','SW','ST'] },
+			"C1": { "name": "Controle",    "bras": ['KI','GE','CY'] },
+			"R1": { "name": "Retorno",     "bras": ['GO','CA','FO'] },
+			"T1": { "name": "Transmitir",  "bras": ['GO','BO','CY'] },
+			"M1": { "name": "Manufatura",  "bras": ['GE','BO','FO'] },
+			"S3": { "name": "Sucata",      "bras": ['SW','GE']      },
+			"R2": { "name": "Rigidez",     "bras": ['GE','ST','AN'] },
+			"L1": { "name": "Leve",        "bras": ['RO','CL']      },
+			"F1": { "name": "Fluxo",       "bras": ['MU','CL','CY'] },
+			"E1": { "name": "Esvair",      "bras": ['MI','CL','FO'] },
+			"D1": { "name": "Dissolver",   "bras": ['SM','CA','CL'] },
+			"P1": { "name": "Poesia",      "bras": ['MU','BO']      },
+			"E2": { "name": "Emocional",   "bras": ['SM','GO','RO'] },
+			"H1": { "name": "Hiperativo",  "bras": ['SM','BE','ST'] },
+			"A1": { "name": "Assassino",   "bras": ['SW','BE']      },
+			"P2": { "name": "Paixão",      "bras": ['MU','RO','MI'] },
+			"V1": { "name": "Veneno",      "bras": ['RO','CA','AN'] },
+			"O1": { "name": "Oculto",      "bras": ['SM','AN','MI'] },
+			"P3": { "name": "Profundo",    "bras": ['SW','MI','BO'] },
+			"R3": { "name": "Reproduzir",  "bras": ['MU','GO','BE'] },
+			"I1": { "name": "Imunidade",   "bras": ['KI','BE','CA'] },
+			"B1": { "name": "Brilhante",   "bras": ['ST','CY','FO'] },
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 			"00": 'None'
 		}
 
@@ -117,6 +169,7 @@ class Bew:
 				return i # return index
 		return None # Doesn't exist
 
+<<<<<<< HEAD
 	def _generate_bew_image(self, race, personality, color, db):
 		race_db = db.bews.find_one({ '_id': race }, {'face'})
 		x = race_db['face'][0]
@@ -175,11 +228,35 @@ class Bew:
 		types = [random.choice(race['types']), random.choice(race['types'])]
 		
 		# types = [self._random_key(self.types_dict), self._random_key(self.types_dict)]
+=======
+
+	def summon_bew(self):
+		"""
+		id
+		tier
+		raça
+		sexo: M, F, H, X
+		personalidade
+		cor
+		brasão
+		habilidades
+		ataque, velocidade, acerto, resistencia
+
+		"""
+		# id, [raçaId, sexo, raça, genero], Rank, personalidade, [cor, brasões], habs, {ATQ, VEL, ACE, RES}, nome, link
+
+	
+		genre = random.choice(['M', 'F', 'H', 'X'])
+		personality = self._random_key(self.personalities_dict) # Pegar keys e escolher uma aleatoriamente
+		brasoes = [self._random_key(self.brasoes_dict), self._random_key(self.brasoes_dict)]
+		color =  self._random_key(self.color_dict) + str(random.randint(1, 4))
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 
 		# Skill
 		skills = ['00', '00', '00']
 		if(random.random() <= 0.8): # 80%
 			skills[0] = self._random_key(self.skills_dict)
+<<<<<<< HEAD
 
 			if(random.random() <= 0.5):
 				skills[1] = self._random_key(self.skills_dict)
@@ -224,6 +301,39 @@ class Bew:
 			'personality': personality,
 			'color': color,
 			'types': types,
+=======
+			print('1', skills)
+
+			if(random.random() <= 0.5):
+				skills[1] = self._random_key(self.skills_dict)
+				print('2', skills)
+
+				if(random.random() <= 0.3):
+					skills[2] = self._random_key(self.skills_dict)
+					print('3', skills)
+
+		# Status and Tier
+		ATK = f'{random.randint(0, 15):02d}'
+		VEL = f'{random.randint(0, 15):02d}'
+		ACR = f'{random.randint(0, 15):02d}'
+		RES = f'{random.randint(0, 45):02d}'
+		STATUS = [ATK, VEL, ACR, RES]
+		tier = '{:02d}'.format( int( ((int(ATK) + int(VEL) + int(ACR)) / 7 ) + (int(RES) / 13) + (3 - skills.count('00')) ) )
+		
+
+		race = f'{random.randint(1, 255):03d}' # :03d ->  001, 002, etc
+
+
+
+		return {
+			'id': personality + race + genre + tier + color + ''.join(brasoes) + ''.join(skills) + ''.join(STATUS),
+			'tier': tier,
+			'race': race,
+			'genre': genre,
+			'personality': personality,
+			'color': color,
+			'brasao': brasoes,
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 			'skills': skills,
 			'status': {
 				"ATK": ATK,
@@ -231,12 +341,18 @@ class Bew:
 				"ACR": ACR,
 				"RES": RES
 			},
+<<<<<<< HEAD
 			'name': race['name'],
 			'image': str(image),
+=======
+			'name': None,
+			'image': None,
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 			'item': None,
 			'feli': 100
 		}
 
+<<<<<<< HEAD
 	def release(self, bewId, userId, db):
 		# Remove from registered
 		db.bews.update_one({ '_id': '000' }, { '$pull': {
@@ -266,25 +382,49 @@ class Bew:
 		return {
 			"personality": personality,
 			"race": race,
+=======
+	def query_bew_id(self, bewId):
+		# ID -> personality + race + genre + tier + color + brasoes + skills + status
+		color = bewId[9:11]
+		brasoes = bewId[11:15]
+		skills = bewId[15:21]
+		status = bewId[21:]
+		return {
+			"personality": self.personalities_dict[bewId[0:3]],
+			"race": bewId[3:6],
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 			"genre": self.genre_dict[bewId[6:7]],
 			"tier": bewId[7:9],
 			"color": {
 				'color': self.color_dict[color[0]],
 				'intensity': color[1]
 			},
+<<<<<<< HEAD
 			"types": [ self.types_dict[types[0:2]], self.types_dict[types[2:]] ],
+=======
+			"brasoes": [ self.brasoes_dict[brasoes[0:2]], self.brasoes_dict[brasoes[2:]] ],
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 			"skills": [ self.skills_dict[skills[0:2]],  self.skills_dict[skills[2:4]], self.skills_dict[skills[4:]] ],
 			"status": {
 				"ATK": status[0:2],
 				"VEL": status[2:4],
 				"ACR": status[4:6],
 				"RES": status[6:],
+<<<<<<< HEAD
 			},
 			"image": str(image)
 		}
 
 
 	# Só para debug
+=======
+
+			}
+		}
+
+
+
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 	def query_user_bew(self, data, db):
 		user = db.users.find_one({'_id': ObjectId(data['userId']) }) # Return only bews field
 
@@ -335,6 +475,10 @@ class Bew:
 {"name":"AAA","discordId":"333333","bews":[{"bewId":"ESSAPIRANHA","item":"Pena","image":"adefeqjo8hfoeunfajldnfoeqhafunaefuiaegfyagdbjfhcaejbjlakelnflandhu==","name":"Rebew","feli":100},{"bewId":"CUR001F03G2ETFER3000002011502","item":None,"image":"gjkjefgeqfsgsfgsgsfhjo8hgjfoegnfoeqhjkkgfyagdbjfhcaegjkgjjbjlasfghsu==","name":"Myra","feli":75}]}
 {'bewId': 'AAAA', 'item': None, 'image': 'AA==', 'name': 'MMM', 'feli': 00}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
 REMOVE OBJECT INSIDE ARRAY
 "bews": [
 	{
