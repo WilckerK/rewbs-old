@@ -20,24 +20,45 @@ class Bew:
 		}
 
 		self.types_dict = {
-			"KI": { "name": "King",     "description": "Rei, poder político, chefe da tribo, reino, líder", "types": [ ["SW","KI"], ["ST","RO"], ["SM","FO"] ], "emoji": '👑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645349535884/1.png'  },
-			"SW": { "name": "Sword",    "description": "Espada, facas, armas brancas, guerra, violência", "types": [ ["BE","RO"], ["BO","MI"], ["MU","SM"] ], "emoji": '⚔️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645781536868/2.png'  },
-			"MU": { "name": "Music",    "description": "Musica, arte, melodia, harmonia, ordem, esculturas", "types": [ ["SM","MU"], ["SW","GE"], ["GO","ST"] ], "emoji": '🎵', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558646259687475/3.png'  },
-			"GE": { "name": "Gear",     "description": "Engrenagem, máquinas, fábricas, metal, robôs", "types": [ ["CY","SW"], ["CL","CA"], ["BE","MU"] ], "emoji": '⚙️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558646754623559/4.png'  },
+			"KI": { "name": "King",     "description": "Rei, poder político, chefe da tribo, reino, líder",    "types": [ ["SW","KI"], ["ST","RO"], ["SM","FO"] ], "emoji": '👑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645349535884/1.png'  },
+			"SW": { "name": "Sword",    "description": "Espada, facas, armas brancas, guerra, violência",      "types": [ ["BE","RO"], ["BO","MI"], ["MU","SM"] ], "emoji": '⚔️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558645781536868/2.png'  },
+			"MU": { "name": "Music",    "description": "Musica, arte, melodia, harmonia, ordem, esculturas",   "types": [ ["SM","MU"], ["SW","GE"], ["GO","ST"] ], "emoji": '🎵', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558646259687475/3.png'  },
+			"GE": { "name": "Gear",     "description": "Engrenagem, máquinas, fábricas, metal, robôs",         "types": [ ["CY","SW"], ["CL","CA"], ["BE","MU"] ], "emoji": '⚙️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558646754623559/4.png'  },
 			"SM": { "name": "Smile",    "description": "Sorriso, alegria, humor, juventude, festa, inocencia", "types": [ ["GO","BO"], ["KI","SW"], ["CL","GO"] ], "emoji": '🙂', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558755869425746/5.png'  },
-			"GO": { "name": "Goodness", "description": "", "types": [ ["KI","MI"], ["MU","SM"], ["BE","CA"] ], "emoji": '💚', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558756255318136/6.png'  },
-			"BO": { "name": "Book",     "description": "Livro, conhecimento, estudos, psiquico, mental", "types": [ ["FO","MU"], ["BE","CY"], ["SW","MI"] ], "emoji": '📙', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558756607639763/7.png'  },
-			"BE": { "name": "Beast",    "description": "Besta, fera, animal, voraz, monstro, irracional", "types": [ ["AN","BE"], ["GO","GE"], ["BO","ST"] ], "emoji": '🐾', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558757022875688/8.png'  },
-			"RO": { "name": "Roses",    "description": "Rosas, plantas, paixão, natureza, amor, sedução", "types": [ ["SM","CL"], ["AN","FO"], ["CL","KI"] ], "emoji": '🌹', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831106863244/9.png'  },
-			"CA": { "name": "Catalyst", "description": "Catalizador, químico, mágico, intensificar, poções", "types": [ ["ST","CY"], ["CA","GO"], ["GE","CA"] ], "emoji": '⚗️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831517900930/10.png' },
-			"MI": { "name": "Mistery",  "description": "Mistério, bruxaria, oculto, maligno, criminoso", "types": [ ["CA","FO"], ["BO","AN"], ["CY","SW"] ], "emoji": '🌑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831924748308/11.png' },
-			"ST": { "name": "Star",     "description": "Estrela, espaço, luz, planetas, fama, iluminado", "types": [ ["MI","RO"], ["BE","MU"], ["AN","KI"] ], "emoji": '🌟', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558832373542992/12.png' },
-			"CL": { "name": "Cloud",    "description": "Nuvem, voar, ar, ventos, clima, alto, leve", "types": [ ["GE","ST"], ["SM","RO"], ["AN","GE"] ], "emoji": '☁️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558922551070760/13.png' },
+			"GO": { "name": "Goodness", "description": "Bondade, benevolencia, religioso, paz, santo...",      "types": [ ["KI","MI"], ["MU","SM"], ["BE","CA"] ], "emoji": '💚', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558756255318136/6.png'  },
+			"BO": { "name": "Book",     "description": "Livro, conhecimento, estudos, psiquico, mental",       "types": [ ["FO","MU"], ["BE","CY"], ["SW","MI"] ], "emoji": '📙', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558756607639763/7.png'  },
+			"BE": { "name": "Beast",    "description": "Besta, fera, animal, voraz, monstro, irracional",      "types": [ ["AN","BE"], ["GO","GE"], ["BO","ST"] ], "emoji": '🐾', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558757022875688/8.png'  },
+			"RO": { "name": "Roses",    "description": "Rosas, plantas, paixão, natureza, amor, sedução",      "types": [ ["SM","CL"], ["AN","FO"], ["CL","KI"] ], "emoji": '🌹', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831106863244/9.png'  },
+			"CA": { "name": "Catalyst", "description": "Catalizador, químico, mágico, intensificar, poções",   "types": [ ["ST","CY"], ["CA","GO"], ["GE","CA"] ], "emoji": '⚗️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831517900930/10.png' },
+			"MI": { "name": "Mistery",  "description": "Mistério, bruxaria, oculto, maligno, criminoso",       "types": [ ["CA","FO"], ["BO","AN"], ["CY","SW"] ], "emoji": '🌑', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558831924748308/11.png' },
+			"ST": { "name": "Star",     "description": "Estrela, espaço, luz, planetas, fama, iluminado",      "types": [ ["MI","RO"], ["BE","MU"], ["AN","KI"] ], "emoji": '🌟', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558832373542992/12.png' },
+			"CL": { "name": "Cloud",    "description": "Nuvem, voar, ar, ventos, clima, alto, leve",           "types": [ ["GE","ST"], ["SM","RO"], ["AN","GE"] ], "emoji": '☁️', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558922551070760/13.png' },
 			"CY": { "name": "Cyber",    "description": "Cibernético, tecnologia, software, elétrico, moderno", "types": [ ["CL","AN"], ["CY","MI"], ["CY","BO"] ], "emoji": '📱', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558923054383154/14.png' },
 			"FO": { "name": "Fortune",  "description": "Fortuna, dinheiro, capital, ouro, riquezas, ganância", "types": [ ["GE","GO"], ["FO","KI"], ["FO","RO"] ], "emoji": '💰', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558923549311047/15.png' },
-			"AN": { "name": "Ancient",  "description": "Ancião, antigo, esquecido, desgastado, passado", "types": [ ["BO","CA"], ["ST","CL"], ["MI","RO"] ], "emoji": '⏳', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558924056825916/16.png' },
-			"TS": { "name": "Tsunami",  "description": "Água, gelo, submarino, aquatico, frio", "types": [], "emoji": '🌊', "image_url": ''},
-			"EM": { "name": "Ember",    "description": "typesas, Fogo, calor, quente, lava, queimar", "types": [], "emoji": '🔥', "iamge_url": ''}
+			"AN": { "name": "Ancient",  "description": "Ancião, antigo, esquecido, desgastado, passado",       "types": [ ["BO","CA"], ["ST","CL"], ["MI","RO"] ], "emoji": '⏳', "image_url": 'https://cdn.discordapp.com/attachments/1030554748664946809/1030558924056825916/16.png' },
+			"TS": { "name": "Tsunami",  "description": "Água, gelo, submarino, aquatico, frio",                "types": [], "emoji": '🌊', "image_url": ''},
+			"EM": { "name": "Ember",    "description": "typesas, Fogo, calor, quente, lava, queimar",          "types": [], "emoji": '🔥', "iamge_url": ''}
+		}
+
+		self.types_chart = { # Type / Effective / Ineffective
+			"KI": [["KI", "SW", "FO"], ["ST", "RO", "GO"]],
+			"SW": [["SM", "BE", "MI"], ["GE", "BO"]],
+			"MU": [["SM", "GO"],       ["BO", "AN", "GE"]],
+			"GE": [["CL", "CY"],       ["MU", "BO", "FO"]],
+			"SM": [["AN", "RO"],       ["SW", "GO"]],
+			"GO": [["KI", "ST"],       ["SW", "SM"]],
+			"BO": [["MI", "SW"],       ["KI", "MU"]],
+			"BE": [["BE", "FO", "CY"], ["AN", "CL", "SM"]],
+			"RO": [["TS", "CA", "ST"], ["GE", "EM"]],
+			"CA": [["ST", "MU", "FO"], ["MI", "GO"]],
+			"MI": [["CA", "EM", "GO"], ["ST", "MU"]],
+			"ST": [["MI", "TS", "CL"], ["CA", "EM"]],
+			"EM": [["RO", "BO", "GE"], ["TS", "CL", "MI"]],
+			"TS": [["EM", "BO"],       ["BE", "RO", "CA"]],
+			"CL": [["RO", "MU"],       ["CL", "TS", "CY"]],
+			"CY": [["AN", "BO", "CA"], ["FO", "TS", "SM"]],
+			"FO": [["GO", "SW"],       ["FO", "BE"]],
+			"AN": [["SM", "GE"],       ["KI", "AN", "CY"]],
 		}
 
 
@@ -86,70 +107,6 @@ class Bew:
 			'X': 'Assexual'
 		}
 
-		# Para testes apenas, não vai continuar na versão final
-		self.races_bew = [
-			{
-				"id": "001",
-				"name": "Psytal",
-				"face": [ 120, 90 ],
-				"types": []
-			},
-			{
-				"id": "002",
-				"name": "Rulio",
-				"face": [ 180, 100 ],
-				"types": []
-			},
-			{
-				"id": "003",
-				"name": "Slier",
-				"face": [ 120, 60 ],
-				"types": []
-			},
-			{
-				"id": "004",
-				"name": "Batol",
-				"face": [ 120, 40 ],
-				"types": []
-			},
-			{
-				"id": "005",
-				"name": "Pagli",
-				"face": [ 120, 50 ],
-				"types": []
-			},
-			{
-				"id": "006",
-				"name": "Nogra",
-				"face": [ 220, 110 ],
-				"types": []
-			},
-			{
-				"id": "007",
-				"name": "Flast",
-				"face": [ 160, 80 ],
-				"types": []
-			},
-			{
-				"id": "008",
-				"name": "Botuino",
-				"face": [ 120, 60 ],
-				"types": []
-			},
-			{
-				"id": "009",
-				"name": "Lusange",
-				"face": [ 120, 60 ],
-				"types": []
-			},
-			{
-				"id": "010",
-				"name": "Macto",
-				"face": [ 120,110 ],
-				"types": []
-			}
-		]
-
 	def _random_key(self, dict):
 		return random.choice(list(dict.keys()))
 
@@ -160,15 +117,11 @@ class Bew:
 				return i # return index
 		return None # Doesn't exist
 
-	def _generate_bew_image(self, race, personality, color):
-		# Só para testes, isso não vai ficar aqui
-		x, y = 0, 0
-		for r in self.races_bew:
-			if r['name'] == race:
-				x = r['face'][0]
-				y = r['face'][1]
+	def _generate_bew_image(self, race, personality, color, db):
+		race_db = db.bews.find_one({ '_id': race }, {'face'})
+		x = race_db['face'][0]
+		y = race_db['face'][1]
 		path = 'static/images/bew_base'
-
 
 
 		# Make base
@@ -259,7 +212,7 @@ class Bew:
 			})
 
 		# Gen image
-		image = self._generate_bew_image(race['name'], personality, color)
+		image = self._generate_bew_image(race['_id'], personality, color, db)
 
 		# Return
 		return {
