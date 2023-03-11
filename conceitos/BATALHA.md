@@ -37,7 +37,7 @@ Primeiro de tudo monta o campo, ordena os bews de acordo com a posição deles n
   "counter": "", 
   "original_status": {
   }, 
-  "types_relation": {
+  "types_chart": {
     "effective":[],
     "ineffective":[]
   }, 
