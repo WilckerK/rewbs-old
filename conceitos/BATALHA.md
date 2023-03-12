@@ -44,3 +44,5 @@ Primeiro de tudo monta o campo, ordena os bews de acordo com a posição deles n
   "critcal_chance": 5, 
   "field_turns": 0,
 ```
+
+> envent_log
