@@ -72,10 +72,12 @@ Aqui se deve guardar os ids dos bews existentes e as raças, o primeiro registro
 A de cartas deve conter o nome da carta, a categoria da carta e o efeito salvo em string.
 ```json
 {
-  "nome": "Agrotóxico",
-  "category": "Resposta",
-  "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku=",
-  "efeito":
+  "_id": ""
+  "name": "Agrotóxico",
+  "category": "Response",
+  "text": ['Inglês', 'Português'],
+  "image": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku=",
+  "effect":
 }
 ```
 
