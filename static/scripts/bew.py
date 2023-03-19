@@ -7,16 +7,18 @@ from .mongo import Mongo
 
 
 class Bew:
-	def __init__(self):
+	def __init__(self, db):
+		self.db = db # COMO QUE EU NUNCA PENSEI NISSO?????
+
 		self.personalities_dict = {
 			"ALE": "Alegre",
-			"MED": "Medroso",
-			"COR": "Corajoso",
 			"ATR": "Atrevido",
+			"COR": "Corajoso",
 			"CUR": "Curioso",
+			"INS": "Insano",
+			"MED": "Medroso",
 			"RAN": "Rancoroso",
-			"VIO": "Violento",
-			"INS": "Insano"
+			"VIO": "Violento"
 		}
 
 		self.types_dict = {
@@ -117,8 +119,8 @@ class Bew:
 				return i # return index
 		return None # Doesn't exist
 
-	def _generate_bew_image(self, race, personality, color, db):
-		race_db = db.bews.find_one({ '_id': race }, {'face'})
+	def _generate_bew_image(self, race, personality, color):
+		race_db = self.db.bews.find_one({ '_id': race }, {'face'})
 		x = race_db['face'][0]
 		y = race_db['face'][1]
 		path = 'static/images/bew_base'
@@ -166,12 +168,12 @@ class Bew:
 		img.save(buffered, format="PNG")
 		return str(base64.b64encode(buffered.getvalue())).replace('b\'', 'data:image/jpeg;base64,').replace('\'', '')
 
-	def summon(self, register=False, db=None):
+	def summon(self, register=False):
 		genre = random.choice(['M', 'F', 'H', 'X'])
 		personality = self._random_key(self.personalities_dict) # Pegar keys e escolher uma aleatoriamente
 		color =  self._random_key(self.color_dict) + str(random.randint(0, 3))
 	
-		race = db.bews.find()[random.randint(1, db.bews.count_documents({}) - 1)]
+		race = self.db.bews.find()[random.randint(1, self.db.bews.count_documents({}) - 1)]
 		types = [random.choice(race['types']), random.choice(race['types'])]
 		
 		# types = [self._random_key(self.types_dict), self._random_key(self.types_dict)]
@@ -188,47 +190,49 @@ class Bew:
 					skills[2] = self._random_key(self.skills_dict)
 
 
+
 		# Status and Tier
-		ATK = '{:02d}'.format(random.randint(0, 15)) # :02d ->  01, 02, etc
-		VEL = '{:02d}'.format(random.randint(0, 15))
-		ACR = '{:02d}'.format(random.randint(0, 15))
-		RES = '{:02d}'.format(random.randint(0, 45))
-		STATUS = [ATK, VEL, ACR, RES]
-		tier = '{:02d}'.format( int( ((int(ATK) + int(VEL) + int(ACR)) / 7 ) + (int(RES) / 13) + (3 - skills.count('00')) ) )
+		ATK = random.randint(0, 15) # :02d ->  01, 02, etc
+		SPD = random.randint(0, 15)
+		ACC = random.randint(0, 15)
+		RST = random.randint(0, 45)
+		STATUS = [ATK, SPD, ACC, RST]
+		tier = '{:02d}'.format( int( ((ATK + SPD + ACC) / 7 ) + (RST / 13) + (3 - skills.count('00')) ) )
 		
 		# Make Id
-		bew_id = personality + race['_id'] + genre + tier + color + ''.join(types) + ''.join(skills) + ''.join(STATUS)
+		bew_id = personality + race['_id'] + genre + tier + color + ''.join(types) + ''.join(skills) + ''.join(str(STATUS))
 
 		# Check if bewId exist
-		for id in db.bews.find_one({ '_id': '000' })['registered']:
+		for id in self.db.bews.find_one({ '_id': '000' })['registered']:
 			if bew_id == id:
 				return response_code('400', 'Poisé nego, se fudeu')
 
 		# If not, register
 		if register:
-			db.bews.update_one({ '_id': '000' }, { '$push': { # Pare remover um item do array é só trocar o "$push" por "$pull"
+			self.db.bews.update_one({ '_id': '000' }, { '$push': { # Pare remover um item do array é só trocar o "$push" por "$pull"
 					'registered': bew_id
 				}
 			})
 
 		# Gen image
-		image = self._generate_bew_image(race['_id'], personality, color, db)
+		image = self._generate_bew_image(race['_id'], personality, color, self.db)
 
 		# Return
 		return {
 			'id': bew_id,
 			'tier': tier,
 			'race': race['name'],
+			'height': '%dm' % (1 - (0.12 - int(tier)/100)),
 			'genre': genre,
 			'personality': personality,
 			'color': color,
 			'types': types,
 			'skills': skills,
 			'status': {
-				"ATK": ATK,
-				"VEL": VEL,
-				"ACR": ACR,
-				"RES": RES
+				"ATK": f'{(ATK + 10):02d}',
+				"SPD": f'{(SPD + 10):02d}',
+				"ACC": f'{(ACC + 80):02d}',
+				"RST": f'{(RST + 80):02d}'
 			},
 			'name': race['name'],
 			'image': str(image),
@@ -236,29 +240,29 @@ class Bew:
 			'feli': 100
 		}
 
-	def release(self, bewId, userId, db):
+	def release(self, bewId, userId):
 		# Remove from registered
-		db.bews.update_one({ '_id': '000' }, { '$pull': {
+		self.db.bews.update_one({ '_id': '000' }, { '$pull': {
 				'registered': bewId
 			}
 		})
 
 		# Search for bew in user obj
-		for bew in db.users.find_one({ '_id': ObjectId(userId) }):
+		for bew in self.db.users.find_one({ '_id': ObjectId(userId) }):
 			# Found and remove
 			if bew['bewId'] == bewId:
-				db.users.update_one({'_id': ObjectId(userId)}, {'$pull': {'bews': {'bewId': bewId}}})
+				self.db.users.update_one({'_id': ObjectId(userId)}, {'$pull': {'bews': {'bewId': bewId}}})
 				return response_code('200', 'Released!')
 		return response_code('400', 'Bew not found!')
 
 
 
-	def query_bew_id(self, bewId, db):
+	def query_bew_id(self, bewId):
 		color = bewId[9:11]
 		types = bewId[11:15]
 		skills = bewId[15:21]
 		status = bewId[21:]
-		race = db.bews.find()[bewId[3:6]]['name']
+		race = self.db.bews.find()[bewId[3:6]]['name']
 		personality = self.personalities_dict[bewId[0:3]]
 		image = self._generate_bew_image(race, personality, color)
 
@@ -275,17 +279,17 @@ class Bew:
 			"skills": [ self.skills_dict[skills[0:2]],  self.skills_dict[skills[2:4]], self.skills_dict[skills[4:]] ],
 			"status": {
 				"ATK": status[0:2],
-				"VEL": status[2:4],
-				"ACR": status[4:6],
-				"RES": status[6:],
+				"SPD": status[2:4],
+				"ACC": status[4:6],
+				"RST": status[6:]
 			},
 			"image": str(image)
 		}
 
 
 	# Só para debug
-	def query_user_bew(self, data, db):
-		user = db.users.find_one({'_id': ObjectId(data['userId']) }) # Return only bews field
+	def query_user_bew(self, data):
+		user = self.db.users.find_one({'_id': ObjectId(data['userId']) }) # Return only bews field
 
 		if not user:
 			return response_code('400', 'User doesn\'t exist')
@@ -300,10 +304,10 @@ class Bew:
 		}
 
 
-	def trade_bews(self, data, db):
+	def trade_bews(self, data):
 		# Get users
-		user = db.users.find_one({'_id': ObjectId(data['userId']) })#, { 'bews' }) # Return only bews field
-		user2 = db.users.find_one({'_id': ObjectId(data['userId2']) })#, { 'bews' })
+		user = self.db.users.find_one({'_id': ObjectId(data['userId']) })#, { 'bews' }) # Return only bews field
+		user2 = self.db.users.find_one({'_id': ObjectId(data['userId2']) })#, { 'bews' })
 
 		# Check if exist
 		if not user or not user2:
@@ -325,8 +329,8 @@ class Bew:
 		bew, bew2 = bew2, bew 
 
 		# Update bews, aka trade
-		db.users.update_one({'_id': ObjectId(data['userId'])}, {'$set': {'bews.%c' % str(ibew): bew } })
-		db.users.update_one({'_id': ObjectId(data['userId2'])}, {'$set': {'bews.%c' % str(ibew2): bew2 } })
+		self.db.users.update_one({'_id': ObjectId(data['userId'])}, {'$set': {'bews.%c' % str(ibew): bew } })
+		self.db.users.update_one({'_id': ObjectId(data['userId2'])}, {'$set': {'bews.%c' % str(ibew2): bew2 } })
 
 		return response_code('200', 'Trade done!')
 
