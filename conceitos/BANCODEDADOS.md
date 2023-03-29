@@ -9,33 +9,35 @@ A collection de usuário deve conter as informações de todos as pessoas que se
 {
 	"_id": "lfhgolsnvoh8u494hfkjf466sh",
 	"nome": "Iberê",
-	"email": "manualdomundo@gmail.com",
-	"senha": "3fw4fwrffwefsddff3aw2",
+	"info": {
+		"email": "manualdomundo@gmail.com",
+		"senha": "3fw4fwrffwefsddff3aw2",
+	},
 	"discordId": "34534536363456",
 	"exp": 87987,
 	"rewbs": 1340,
 	"daily": "2023-03-06T22:21:42Z",
 	"bews":[
 		{
-			"nome":"Rebew", 
-			"bewId":"INS000H12C1REEPS1S2I115151545", 
+			"name":"Rebew", 
+			"id":"INS000H12C1REEPS1S2I115151545", 
 			"feli": 100,
 			"item": "Pena",
 			"image": "adefeqjo8hfoeunfajldnfoeqhafunaefuiaegfyagdbjfhcaejbjlakelnflandhu=="
 		},
 		{
-			"nome":"Myra", 
-			"bewId":"CUR001F03G2ETFER3000002011502", 
+			"name":"Myra", 
+			"id":"CUR001F03G2ETFER3000002011502", 
 			"feli": 75,
 			"item": "",
 			"image": "gjkjefgeqfsgsfgsgsfhjo8hgjfoegnfoeqhjkkgfyagdbjfhcaegjkgjjbjlasfghsu=="
 		}
 	],
-	"cartas":{
-			"resposta": ["Coroação", "Agrotóxico", "Coroação", "Adestrar"],
-			"mapa": ["Berçário", "Mina"],
-			"item": ["Adaga", "Livro"]
-		}
+	"cartas": {
+		"responses": ["Coroação", "Agrotóxico", "Coroação", "Adestrar"],
+		"maps": ["Berçário", "Mina"],
+		"items": ["Adaga", "Livro"]
+	}
 }
 ```
 
@@ -44,7 +46,7 @@ Aqui se deve guardar os ids dos bews existentes e as raças, o primeiro registro
 ```json
 {
   "_id": "000"
-  "bewsRegistrados": [
+  "registered": [
   	"INS000H12C1KISWS1S2I115151545",
   	"CUR001F03G2STBER3000002011502",
   	"ALE004X12D4CLCYB1000011071226",
@@ -53,17 +55,17 @@ Aqui se deve guardar os ids dos bews existentes e as raças, o primeiro registro
 },
 {
   "_id": "001",
-  "nome": "Psytal",
+  "name": "Psytal",
   "types": ["KI", "SM", "BO", "CA"],
-  "rosto": [100, 200],
-  "imagem": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
+  "face": [100, 200],
+  "image": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
 },
 {
   "_id": "002",
-  "nome": "Rulio",
+  "name": "Rulio",
   "types": ["BE", "KI", "SW"],
-  "rosto": [400, 80],
-  "imagem": "sfadfadfarkgjoush97fsg8yfbisasfasfi7ygefiku="
+  "face": [400, 80],
+  "image": "sfadfadfarkgjoush97fsg8yfbisasfasfi7ygefiku="
 },
 "..."
 ```
@@ -75,9 +77,8 @@ A de cartas deve conter o nome da carta, a categoria da carta e o efeito salvo e
   "_id": ""
   "name": "Agrotóxico",
   "category": "Response",
-  "text": ['Inglês', 'Português'],
-  "image": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku=",
-  "effect":
+  "text": ["Inglês", "Português"],
+  "image": "sfsgset4wrgsrkgjoush97fsg8yfbisugebfiy7sg86egfsiyebfi7ygefiku="
 }
 ```
 
