@@ -14,12 +14,8 @@ from copy import deepcopy
 
 
 class Bew:
-	def __init__(self, db):
-<<<<<<< HEAD
+	def __init__(se,lf, db):
 		self.db = db
-=======
-		self.db = db # COMO QUE EU NUNCA PENSEI NISSO?????
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 
 		self.personalities_dict = {
 			"ALE": "Alegre",
@@ -131,11 +127,7 @@ class Bew:
 		return None # Doesn't exist
 
 	def _generate_bew_image(self, race, personality, color):
-<<<<<<< HEAD
 		race_db = self.db.bews.find_one({ '_id': str(race) }, {'face'})
-=======
-		race_db = self.db.bews.find_one({ '_id': race }, {'face'})
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 		x = race_db['face'][0]
 		y = race_db['face'][1]
 		path = 'static/images/bew_base'
@@ -183,23 +175,13 @@ class Bew:
 		img.save(buffered, format="PNG")
 		return str(base64.b64encode(buffered.getvalue())).replace('b\'', 'data:image/jpeg;base64,').replace('\'', '')
 
-<<<<<<< HEAD
 	def summon(self, register=False, db=None):
 		genre = choice(['M', 'F', 'H', 'X'])
-=======
-	def summon(self, register=False):
-		genre = random.choice(['M', 'F', 'H', 'X'])
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 		personality = self._random_key(self.personalities_dict) # Pegar keys e escolher uma aleatoriamente
 		color =  self._random_key(self.color_dict) + str(randint(0, 3))
 	
-<<<<<<< HEAD
 		race = list( self.db.bews.find({ '_id': randint(1, self.db.bews.count_documents({}) - 1) }))[0]
 		types = [choice(race['types']), choice(race['types'])]
-=======
-		race = self.db.bews.find()[random.randint(1, self.db.bews.count_documents({}) - 1)]
-		types = [random.choice(race['types']), random.choice(race['types'])]
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 		
 		# types = [self._random_key(self.types_dict), self._random_key(self.types_dict)]
 
@@ -217,21 +199,12 @@ class Bew:
 
 
 		# Status and Tier
-<<<<<<< HEAD
 		ATK = '{:02d}'.format(randint(0, 15)) # :02d ->  01, 02, etc
 		SPD = '{:02d}'.format(randint(0, 15))
 		ACC = '{:02d}'.format(randint(0, 15))
 		RST = '{:02d}'.format(randint(0, 45))
 		STATUS = [ATK, SPD, ACC, RST]
 		tier = '{:02d}'.format( int( ((int(ATK) + int(SPD) + int(ACC)) / 7 ) + (int(RST) / 13) + (3 - skills.count('00')) ) )
-=======
-		ATK = random.randint(0, 15) # :02d ->  01, 02, etc
-		SPD = random.randint(0, 15)
-		ACC = random.randint(0, 15)
-		RST = random.randint(0, 45)
-		STATUS = [ATK, SPD, ACC, RST]
-		tier = '{:02d}'.format( int( ((ATK + SPD + ACC) / 7 ) + (RST / 13) + (3 - skills.count('00')) ) )
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 		
 		# Make Id
 		bew_id = personality + race['_id'] + genre + tier + color + ''.join(types) + ''.join(skills) + ''.join(str(STATUS))
@@ -249,39 +222,24 @@ class Bew:
 			})
 
 		# Gen image
-<<<<<<< HEAD
 		image = self._generate_bew_image(race['_id'], personality, color)
-=======
-		image = self._generate_bew_image(race['_id'], personality, color, self.db)
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 
 		# Return
 		return {
 			'id': bew_id,
 			'tier': tier,
 			'race': race['name'],
-<<<<<<< HEAD
 			'height': '%sm' % (1 - (0.12 - int(tier)/100)),
-=======
-			'height': '%dm' % (1 - (0.12 - int(tier)/100)),
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 			'genre': genre,
 			'personality': personality,
 			'color': color,
 			'types': types,
 			'skills': skills,
 			'status': {
-<<<<<<< HEAD
 				"ATK": ATK,
 				"SPD": SPD,
 				"ACC": ACC,
 				"RST": RST
-=======
-				"ATK": f'{(ATK + 10):02d}',
-				"SPD": f'{(SPD + 10):02d}',
-				"ACC": f'{(ACC + 80):02d}',
-				"RST": f'{(RST + 80):02d}'
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 			},
 			'name': race['name'],
 			'image': str(image),
@@ -307,7 +265,6 @@ class Bew:
 
 
 	def query_bew_id(self, bewId):
-<<<<<<< HEAD
 		personality = bewId[0:3]
 		color       = bewId[9:11]
 		types       = bewId[11:15]
@@ -316,15 +273,6 @@ class Bew:
 
 		race   = list( self.db.bews.find({ '_id': bewId[3:6] }) )[0]
 		image  = self._generate_bew_image(race['_id'], personality, color)
-=======
-		color = bewId[9:11]
-		types = bewId[11:15]
-		skills = bewId[15:21]
-		status = bewId[21:]
-		race = self.db.bews.find()[bewId[3:6]]['name']
-		personality = self.personalities_dict[bewId[0:3]]
-		image = self._generate_bew_image(race, personality, color)
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 
 		return {
 			"id": bewId,
@@ -342,11 +290,7 @@ class Bew:
 				"ATK": status[0:2],
 				"SPD": status[2:4],
 				"ACC": status[4:6],
-<<<<<<< HEAD
 				"RST": status[6:],
-=======
-				"RST": status[6:]
->>>>>>> dfde5a536633e8ab24dc24c2978abca79a0aac7d
 			},
 			"image": str(image)
 		}
