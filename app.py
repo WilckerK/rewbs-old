@@ -28,7 +28,7 @@ db = Mongo(app).database()
 user_login = User(app, db) # Eu ia chamar de login_user, mas flask_login já tem um método com esse nome
 
 # Other files
-bew = Bew() # Precise inicializar por causa dos dict que estão no constructor
+bew = Bew(db) # Precise inicializar por causa dos dict que estão no constructor
 
 # Register blueprints
 import_routes()
