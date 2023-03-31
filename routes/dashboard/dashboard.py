@@ -5,7 +5,6 @@ from flask_login import current_user
 
 @dashboard.route('/')
 def dashboard():
-<<<<<<< HEAD
 	print(current_user.id)
 	print(current_user.email)
 	print(current_user.name)
@@ -24,8 +23,3 @@ curl -X POST \
 
 
 """
-=======
-	return f'<h1> Hello, {current_user.id}</h1>'
-
-
->>>>>>> ecc92ae5d56a62f0d0887d6a0e4d72296570773d
